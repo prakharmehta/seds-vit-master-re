@@ -1,0 +1,96 @@
+/* container */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  /* margin-top: 60px; */
+  /* padding: 20px; */
+  background: white;
+  height: 100vh;
+}
+
+/* upper-container */
+.about-upper-container {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+}
+
+/* team-picture */
+.about-team-picture {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+/* team-picture-image */
+.about-team-picture img {
+  width: 650px;
+  height: 370px;
+  box-shadow: 25px 15px #a5a5a5;
+  -moz-box-shadow: 25px 15px #a5a5a5;
+  -webkit-box-shadow: 25px 15px #a5a5a5;
+  -khtml-box-shadow: 25px 15px #a5a5a5;
+}
+
+/* heading */
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+/* sub-heading */
+.about-sub-heading {
+  margin: auto;
+  margin-left: 100px;
+}
+
+/* ABOUT */
+.about-about-heading span {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100pt;
+  line-height: 126px;
+  letter-spacing: 0.065em;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+/* SEDS */
+.about-seds-heading span {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50pt;
+  line-height: 126px;
+  letter-spacing: 1.63em;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+/* hr */
+hr {
+  margin-left: 70px;
+}
+
+/* Main Content Container */
+.about-content-container {
+  flex: 1;
+  margin-top: 80px;
+  text-align: justify;
+}
+
+/* Content Span */
+.about-content-container span {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}

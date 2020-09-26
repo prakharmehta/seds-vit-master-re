@@ -1,0 +1,24 @@
+{
+  "name": "seds-vit-master-re",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakharmehta/seds-vit-master-re.git"
+  },
+  "author": "Prakhar Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prakharmehta/seds-vit-master-re/issues"
+  },
+  "homepage": "https://github.com/prakharmehta/seds-vit-master-re#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
