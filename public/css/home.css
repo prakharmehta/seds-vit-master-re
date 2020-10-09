@@ -9,14 +9,6 @@
 }
 
 @font-face {
-  font-family: "Acherus Grotesque Regular Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Acherus Grotesque Regular Italic"),
-    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
-}
-
-@font-face {
   font-family: "Graphik Regular";
   font-style: normal;
   font-weight: normal;
