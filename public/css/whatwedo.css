@@ -25,8 +25,8 @@
 }
 
 /* Body */
-whatwedo-container {
-  background-color: black;
+.whatwedo-container {
+  background: black;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -54,7 +54,7 @@ whatwedo-container {
 }
 
 /* Heading Span */
-.whatwedo-heading span{
+.whatwedo-heading span {
   font-family: Acherus Grotesque Regular;
   font-style: normal;
   font-weight: bold;
@@ -67,11 +67,11 @@ whatwedo-container {
   text-align: center;
   letter-spacing: 0.065em;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Hr */
-hr{
+hr {
   position: absolute;
   top: 130%;
   left: 12.3%;
@@ -83,7 +83,7 @@ hr{
   width: 35%;
   height: 100%;
   left: 0%;
-  background-image: url("../../assets/images/core.jpg");
+  background-image: url("/img/core.jpg");
   background-size: cover;
 
   -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
@@ -105,7 +105,7 @@ hr{
 }
 
 /* Core Grad Span */
-.whatwedo-core-grad span{
+.whatwedo-core-grad span {
   position: absolute;
   width: 11%;
   height: 15px;
@@ -123,7 +123,7 @@ hr{
   align-items: center;
   text-align: center;
   letter-spacing: 0.065em;
-  color: #F8D3B5;
+  color: #f8d3b5;
 }
 
 /* Core Content */
@@ -132,7 +132,7 @@ hr{
   width: 73%;
   height: 100%;
   left: 100%;
-  z-index:22;
+  z-index: 22;
 
   background: white;
 
@@ -141,7 +141,7 @@ hr{
 }
 
 /* Core Content Span */
-.whatwedo-core-content span{
+.whatwedo-core-content span {
   position: absolute;
   width: 70%;
   height: 70%;
@@ -187,7 +187,7 @@ hr{
 }
 
 /* Outreach Grad Span */
-.whatwedo-outreach-grad span{
+.whatwedo-outreach-grad span {
   position: absolute;
   width: 11%;
   height: 15px;
@@ -206,7 +206,7 @@ hr{
   text-align: center;
   letter-spacing: 0.065em;
 
-  color: #F8D3B5;
+  color: #f8d3b5;
 }
 
 /* Outreach Content */
@@ -215,7 +215,7 @@ hr{
   width: 73%;
   height: 100%;
   left: 100%;
-  z-index:20;
+  z-index: 20;
 
   background: white;
 
@@ -224,7 +224,7 @@ hr{
 }
 
 /* Outreach Content Span */
-.whatwedo-outreach-content span{
+.whatwedo-outreach-content span {
   position: absolute;
   width: 70%;
   height: 70%;
@@ -248,7 +248,7 @@ hr{
   height: 100%;
   left: 65%;
 
-  background-image: url("../../assets/images/projects.jpg");
+  background-image: url("/img/projects.jpg");
   background-size: cover;
 
   -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0);
@@ -270,7 +270,7 @@ hr{
 }
 
 /* Projects Container Span */
-.whatwedo-projects-grad span{
+.whatwedo-projects-grad span {
   position: absolute;
   width: 35%;
   height: 15px;
@@ -289,16 +289,16 @@ hr{
   text-align: center;
   letter-spacing: 0.065em;
 
-  color: #F8D3B5;
+  color: #f8d3b5;
 }
 
 /* Projects Content */
-.whatwedo-projects-content{
+.whatwedo-projects-content {
   position: absolute;
   width: 73%;
   height: 100%;
   left: 100%;
-  z-index:20;
+  z-index: 20;
 
   background: white;
 
@@ -307,7 +307,7 @@ hr{
 }
 
 /* Projects Content Span */
-.whatwedo-projects-content span{
+.whatwedo-projects-content span {
   position: absolute;
   width: 70%;
   height: 70%;
