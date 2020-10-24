@@ -11,10 +11,12 @@ $(".whatwedo-core-grad").click(function(){
   if (isEven(count) === false) {
     $(".whatwedo-heading").animate({top: '-6%'});
     $(".whatwedo-core-content").animate({left: '27%'}, 1000);
+    $(".whatwedo-heading").css('z-index', -100);
   }
   else if (isEven(count) === true) {
     $(".whatwedo-core-content").animate({left: '100%'}, 1000);
-    $(".whatwedo-heading").animate({top: '+6%'});
+    $(".whatwedo-heading").animate({top: '206%'});
+    $(".whatwedo-heading").css('z-index', 100);
   }
 });
 
@@ -31,6 +33,7 @@ $(".whatwedo-outreach-grad").click(function(){
     $(".whatwedo-outreach-grad").animate({left: '0%'}, 1000);
     $(".whatwedo-outreach-content").animate({left: '27%'}, 1000);
     $("#whatwedo-outreach-span").animate({left: '30%'}, 1000);
+    $(".whatwedo-heading").css('z-index', -100);
   }
 
   else if (isEven(count) === true) {
@@ -43,7 +46,8 @@ $(".whatwedo-outreach-grad").click(function(){
     $(".whatwedo-outreach-container").css('clip-path', 'polygon(0% 0%, 0% 100%, 80% 100%, 100% 0)', 2000);
     $(".whatwedo-outreach-container").animate({left: '33%'}, 1000);
     $(".whatwedo-core-container").animate({left: '0%'}, 1000);
-    $(".whatwedo-heading").animate({top: '+6%'});
+    $(".whatwedo-heading").animate({top: '206%'});
+    $(".whatwedo-heading").css('z-index', 100);
   }
 });
 
@@ -62,6 +66,7 @@ $(".whatwedo-projects-grad").click(function(){
     $(".whatwedo-projects-grad").css('clip-path', 'polygon(0% 0%, 0% 100%, 80% 100%, 100% 0)');
     $(".whatwedo-projects-content").animate({left: '27%'}, 1200);
     $("#whatwedo-projects-span").animate({left: '33%'}, 1200);
+    $(".whatwedo-heading").css('z-index', -100);
   }
 
   else if (isEven(count) === true) {
@@ -75,7 +80,8 @@ $(".whatwedo-projects-grad").click(function(){
     $(".whatwedo-outreach-container").animate({left: '33%'}, 500);
     $(".whatwedo-core-grad").animate({left: '0%'}, 1200);
     $(".whatwedo-core-container").animate({left: '0%'}, 1200);
-    $(".whatwedo-heading").animate({top: '6%'});
+    $(".whatwedo-heading").animate({top: '206%'});
+    $(".whatwedo-heading").css('z-index', 100);
   }
 });
 });
