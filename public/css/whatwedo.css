@@ -47,9 +47,9 @@
   position: absolute;
   width: 22%;
   height: 3%;
-  top: 5%;
+  top: 205%;
   left: 46.5%;
-  z-index: 10;
+  z-index: 100;
   text-align: justify;
 }
 
@@ -71,7 +71,7 @@
 }
 
 /* Hr */
-hr {
+.whatwedo-container hr {
   position: absolute;
   top: 130%;
   left: 12.3%;

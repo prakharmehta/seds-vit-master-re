@@ -24,10 +24,6 @@
 }
 
 /* body */
-hr {
-  margin-left: 70px;
-}
-
 .about-container {
   display: flex;
   flex-direction: column;
@@ -35,6 +31,10 @@ hr {
   justify-content: center;
   min-height: 100vh;
   background-color: white;
+}
+
+.about-container hr {
+  margin-left: 70px;
 }
 
 .about-upper-container {
@@ -53,8 +53,8 @@ hr {
 }
 
 .about-team-picture img {
-  width: 594px;
-  height: 354.7px;
+  width: 570px;
+  height: 380px;
   box-shadow: 25px 15px #a5a5a5;
   -moz-box-shadow: 25px 15px #a5a5a5;
   -webkit-box-shadow: 25px 15px #a5a5a5;
