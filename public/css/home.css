@@ -19,7 +19,6 @@
 /* body */
 body {
   background-color: black;
-  overflow-y: scroll;
   margin: 0;
   padding: 0;
 }
