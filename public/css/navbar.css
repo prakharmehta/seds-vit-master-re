@@ -63,11 +63,13 @@ nav {
   width: 80px !important;
   text-align: center;
   padding: 5px;
+  transition: all 0.2s linear;
 }
 
 .nav-links-conact-us:hover {
     color: #0b0742!important;
     background: #FFBE85;
+    transition: all 0.2s linear;
 }
 
 .burger {
