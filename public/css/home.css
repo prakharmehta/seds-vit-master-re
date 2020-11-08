@@ -28,11 +28,16 @@
 body {
   background-color: black;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
 /* Home section */
+.home__container {
+  width: 100vw;
+}
+
 .container {
   /* margin-top: 10vh; */
   display: flex;
