@@ -1,0 +1,156 @@
+.contact {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.contact__heading {
+  margin-top: 5vh;
+  flex: 1;
+  font-family: "Acherus Grotesque Regular";
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  /* margin-top: 10vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__content {
+  display: flex;
+  flex: 2;
+}
+
+.contact__form {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.contact__map {
+  flex: 1;
+}
+
+.contact__form form {
+  display: flex;
+  height: 50vh;
+  width: 75%;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.contact__form__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contact__form__field label,
+.contact__form__field input {
+  display: inline-block;
+  color: white;
+}
+
+.contact__form__field input,
+textarea {
+  font-family: "Acherus Grotesque Regular";
+  background: transparent;
+  font-size: 16px;
+  color: white;
+  padding: 5px;
+}
+
+.contact__form__field input,
+textarea {
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  transition: all 0.2s linear;
+}
+
+.contact__form__field input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #3940d0;
+  transition: all 0.2s linear;
+}
+
+.contact__form__field input[type="submit"] {
+  width: initial;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.contact__form__field input[type="submit"]:hover {
+  background: #3940d0;
+  border: 1px solid #3940d0;
+  color: white;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.contact__map {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__map iframe {
+  width: 75%;
+  height: 50vh;
+}
+
+.contact__form__thankyou__msg {
+  font-family: "Acherus Grotesque Regular";
+  background: transparent;
+  font-size: 16px;
+  color: white;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+@media only screen and (max-width: 1024px) {
+    .contact__form__thankyou__msg {
+  font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact__content {
+    flex-direction: column-reverse;
+  }
+
+  .contact__form {
+    margin-top: 5vh;
+  }
+
+  .contact__form form {
+    width: 55%;
+  }
+
+  .contact__form__field {
+    justify-content: center;
+  }
+
+  .contact__map {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+
+  .contact__form__field {
+      flex-direction: column;
+  }
+
+}
