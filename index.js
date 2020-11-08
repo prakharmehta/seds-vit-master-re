@@ -11,4 +11,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/board", (req, res) => {
+  res.render("board");
+})
+
 app.listen(process.env.PORT || 3000);

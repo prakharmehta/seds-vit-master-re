@@ -1,0 +1,161 @@
+/* Web fonts */
+@font-face {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular"),
+    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular Italic"),
+    url("../fonts/AcherusGrotesqueRegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Regular"),
+    url("../fonts/GraphikRegular.woff2") format("woff2");
+}
+
+.board__card__blue {
+  display: flex;
+  flex-direction: column;
+  width: 492px;
+  height: 299px;
+  background: #120c6e;
+  padding: 20px 25px 20px 25px;
+}
+
+.board__card__blue__designation span {
+  color: white;
+  font-family: "Acherus Grotesque Regular", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.board__card__blue__profile {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  padding: 0px 0px 0px 0px;
+  height: 100%;
+}
+
+.board__card__blue__profile__pic {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.board__card__blue__profile__pic img {
+  width: 225px;
+  height: 225px;
+}
+
+.board__card__blue__profile__info {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.board__card__blue__profile__info__name {
+  font-family: "Acherus Grotesque Regular", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 125%;
+  color: white;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 230px;
+}
+
+.board__card__blue__profile__info__name__underline {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around!important;
+  align-items: center;
+}
+
+.board__card__blue__profile__info__name__underline__hr {
+  width: 100px;
+  height: 2px;
+  /* border: 2px solid #FFBE85; */
+  background: #ffbe85;
+}
+
+.board__card__blue__profile__info__name__underline__dot {
+  width: 5px;
+  height: 5px;
+  background: #ffbe85;
+  border-radius: 10px;
+}
+
+.board__card__blue__profile__info__quote {
+  position: relative;
+  height: 125px;
+  width: 205px;
+  display: flex;
+  justify-content: center;
+}
+
+.board__card__blue__profile__info__quote__comma {
+  width: 20px;
+  height: 30px;
+  font-family: "Grenze", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 39.5%;
+  letter-spacing: 0.01em;
+
+  color: #ffbe85;
+}
+
+.comma--left {
+  position: absolute;
+  top: 10;
+  left: 0;
+}
+
+.board__card__blue__profile__info__quote__text {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comma--right {
+  position: absolute;
+  bottom: -20;
+  right: 0;
+}
+
+.board__card__blue__profile__info__social {
+    display: flex;
+    width: 205px;
+    justify-content: space-evenly;
+}
+
+.board__card__blue__profile__info__social .fa {
+    color: white;
+}
