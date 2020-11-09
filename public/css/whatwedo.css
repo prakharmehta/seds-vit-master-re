@@ -1,0 +1,613 @@
+/* Web fonts */
+/* Web fonts */
+@font-face {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular"),
+    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular Italic"),
+    url("../fonts/AcherusGrotesqueRegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Regular"),
+    url("../fonts/GraphikRegular.woff2") format("woff");
+}
+
+/* For Desktop */
+@media only screen and (min-width: 768px) {
+
+/* Body */
+.whatwedo-container {
+  background: black;
+  overflow: hidden;
+  width: 100vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.whatwedo-child-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Heading */
+.whatwedo-heading {
+  position: absolute;
+  width: 22vh;
+  height: 3vh;
+  top: 205vh;
+  left: 46.5vh;
+  z-index: 100;
+  text-align: justify;
+}
+
+/* Heading Span */
+.whatwedo-heading span {
+  font-family: Acherus Grotesque Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0vh;
+  /* or 0px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #ffffff;
+}
+
+/* Hr */
+.whatwedo-container hr {
+  position: absolute;
+  top: 130vh;
+  left: 12.3vh;
+}
+
+/* Core Container */
+.whatwedo-core-container {
+  position: absolute;
+  width: 35vh;
+  height: 100vh;
+  left: 0vh;
+  background-image: url("/img/core.jpg");
+  background-size: cover;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+}
+
+/* Core Grad */
+.whatwedo-core-grad {
+  position: absolute;
+  width: 35vh;
+  height: 100vh;
+  left: 0vh;
+  z-index: 10;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Core Grad Span */
+.whatwedo-core-grad span {
+  position: absolute;
+  width: 11vh;
+  height: 15px;
+  left: 40vh;
+  top: 24vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: #f8d3b5;
+}
+
+/* Core Content */
+.whatwedo-core-content {
+  position: absolute;
+  width: 73vh;
+  height: 100vh;
+  left: 100vh;
+  z-index: 22;
+
+  background: white;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0);
+  clip-path: polygon(10% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Core Content Span */
+.whatwedo-core-content span {
+  position: absolute;
+  width: 70vh;
+  height: 70vh;
+  left: 20vh;
+  top: 30vh;
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+/* Outreach Container */
+.whatwedo-outreach-container {
+  position: absolute;
+  width: 34vh;
+  height: 100vh;
+  left: 33vh;
+
+  background: black;
+  background-size: cover;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+}
+
+/* Outreach Grad */
+.whatwedo-outreach-grad {
+  position: absolute;
+  width: 34vh;
+  height: 100vh;
+  left: 33vh;
+  z-index: 9;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+  clip-path: polygon(0% 0%, 0% 100%, 80% 100%, 100% 0);
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Outreach Grad Span */
+.whatwedo-outreach-grad span {
+  position: absolute;
+  width: 11vh;
+  height: 15px;
+  left: 44vh;
+  top: 24vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #f8d3b5;
+}
+
+/* Outreach Content */
+.whatwedo-outreach-content {
+  position: absolute;
+  width: 73vh;
+  height: 100vh;
+  left: 100vh;
+  z-index: 20;
+
+  background: white;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0);
+  clip-path: polygon(10% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Outreach Content Span */
+.whatwedo-outreach-content span {
+  position: absolute;
+  width: 70vh;
+  height: 70vh;
+  left: 20vh;
+  top: 30vh;
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+/* Projects Container */
+.whatwedo-projects-container {
+  position: absolute;
+  width: 35vh;
+  height: 100vh;
+  left: 65vh;
+
+  background-image: url("/img/projects.jpg");
+  background-size: cover;
+
+  -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0);
+  clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0);
+}
+
+/* Projects Grad */
+.whatwedo-projects-grad {
+  position: absolute;
+  width: 35vh;
+  height: 100vh;
+  left: 65vh;
+  z-index: 10;
+
+  -webkit-clip-path: polygon(20% 0%, 0% 100%, 100% 100%, 100% 0);
+  clip-path: polygon(19% 0%, 0% 100%, 100% 100%, 100% 0);
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Projects Container Span */
+.whatwedo-projects-grad span {
+  position: absolute;
+  width: 35vh;
+  height: 15px;
+  left: 45vh;
+  top: 24vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #f8d3b5;
+}
+
+/* Projects Content */
+.whatwedo-projects-content {
+  position: absolute;
+  width: 73vh;
+  height: 100vh;
+  left: 100vh;
+  z-index: 20;
+
+  background: white;
+
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0);
+  clip-path: polygon(10% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
+/* Projects Content Span */
+.whatwedo-projects-content span {
+  position: absolute;
+  width: 70vh;
+  height: 70vh;
+  left: 20vh;
+  top: 30vh;
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+}
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+
+/* Body */
+.whatwedo-container {
+  background: black;
+  overflow: hidden;
+  width: 100vh;
+  height: 100vh;
+  top: 200vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.whatwedo-child-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Heading */
+.whatwedo-heading {
+  position: absolute;
+  width: 72.5vh;
+  height: 8vh;
+  top: 205vh;
+  left: 14.5vh;
+  z-index: 100;
+  text-align: justify;
+}
+
+/* Heading Span */
+.whatwedo-heading span {
+  font-family: Acherus Grotesque Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0vh;
+  /* or 0px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+/* Hr */
+.whatwedo-container hr {
+  position: absolute;
+  top: 230vh;
+  left: 12.3vh;
+}
+
+/* Core Container */
+.whatwedo-core-container {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 220vh;
+  left: 0vh;
+  background-image: url("/img/core.jpg");
+  background-size: cover;
+}
+
+/* Core Grad */
+.whatwedo-core-grad {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 220vh;
+  left: 0vh;
+  z-index: 10;
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Core Grad Span */
+.whatwedo-core-grad span {
+  position: absolute;
+  width: 11vh;
+  height: 15px;
+  left: 40vh;
+  top: 224vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: #f8d3b5;
+}
+
+/* Core Content */
+.whatwedo-core-content {
+  visibility: hidden;
+  position: absolute;
+  width: 100vh;
+  height: 73vh;
+  top: 300vh;
+  z-index: 22;
+
+  background: white;
+}
+
+/* Core Content Span */
+.whatwedo-core-content span {
+  visibility: hidden;
+  position: absolute;
+  width: 80vh;
+  height: 70vh;
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+/* Outreach Container */
+.whatwedo-outreach-container {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 227vh;
+
+  background: black;
+  background-size: cover;
+}
+
+/* Outreach Grad */
+.whatwedo-outreach-grad {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 227vh;
+  z-index: 9;
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Outreach Grad Span */
+.whatwedo-outreach-grad span {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 227vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #f8d3b5;
+}
+
+/* Outreach Content */
+.whatwedo-outreach-content {
+  visibility: hidden;
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 300vh;
+  z-index: 20;
+
+  background: white;
+
+}
+
+/* Outreach Content Span */
+.whatwedo-outreach-content span {
+  visibility: hidden;
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 300vh;
+
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+/* Projects Container */
+.whatwedo-projects-container {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 254vh;
+
+  background-image: url("/img/projects.jpg");
+  background-size: cover;
+}
+
+/* Projects Grad */
+.whatwedo-projects-grad {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 254vh;
+  z-index: 10;
+
+  background: linear-gradient(180deg, #000000 22.4%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Projects Container Span */
+.whatwedo-projects-grad span {
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 254vh;
+
+  font-family: Graphik Regular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 51.5vh;
+  /* or 15px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #f8d3b5;
+}
+
+/* Projects Content */
+.whatwedo-projects-content {
+  visibility: hidden;
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 300vh;
+  z-index: 20;
+
+  background: white;
+}
+
+/* Projects Content Span */
+.whatwedo-projects-content span {
+  visibility: hidden;
+  position: absolute;
+  width: 100vh;
+  height: 27vh;
+  top: 300vh;
+  text-align: justify;
+
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18pt;
+  line-height: 35px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+}
