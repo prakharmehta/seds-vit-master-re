@@ -493,6 +493,7 @@
   position: absolute;
   width: 100vw;
   height: 27vh;
+  left: 40vw;
   top: 227vh;
 
   font-family: Graphik Regular;
@@ -568,6 +569,7 @@
   position: absolute;
   width: 100vw;
   height: 27vh;
+  left: 40vw;
   top: 254vh;
 
   font-family: Graphik Regular;
