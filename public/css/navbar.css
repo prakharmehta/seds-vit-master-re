@@ -11,7 +11,6 @@ nav {
   font-size: 14px;
   text-transform: capitalize;
   z-index: 10;
-  overflow-x: hidden;
 }
 
 .nav-links {
@@ -104,7 +103,7 @@ nav {
     margin-right: 10vw;
   }
   .nav-links {
-    position: absolute;
+    position: fixed;
     right: 0px;
     height: 92vh;
     top: 8vh;
