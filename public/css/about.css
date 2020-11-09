@@ -24,12 +24,6 @@
 }
 
 /* body */
-<<<<<<< HEAD
-=======
-/* hr {
-  margin-left: 70px;
-} */
->>>>>>> 6db74c6a86f33405ed0876790b292164ee2cbf25
 
 .about-container {
   display: flex;
@@ -46,7 +40,7 @@
   /* flex-wrap: wrap-reverse; */
   justify-content: space-around;
   align-items: center;
-  flex:1;
+  flex: 1;
 }
 
 .about-team-picture {
@@ -122,11 +116,9 @@
   line-height: 35px;
   letter-spacing: 0.06em;
   color: #000000;
-  
 }
 
-@media only screen and (max-width: 1024px)
-{
+@media only screen and (max-width: 1024px) {
   .about-about-heading span {
     font-size: 15vw;
   }
@@ -158,6 +150,6 @@
 
   .about-content-container span {
     font-size: 3vw;
-    line-height: 2.5vh;
+    line-height: 5vh;
   }
 }
