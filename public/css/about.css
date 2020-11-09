@@ -24,6 +24,12 @@
 }
 
 /* body */
+<<<<<<< HEAD
+=======
+/* hr {
+  margin-left: 70px;
+} */
+>>>>>>> 6db74c6a86f33405ed0876790b292164ee2cbf25
 
 .about-container {
   display: flex;
