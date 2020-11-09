@@ -131,7 +131,6 @@
 
 /* Core Content */
 .whatwedo-core-content {
-  visibility: hidden;
   position: absolute;
   width: 73vh;
   height: 100vh;
@@ -146,7 +145,6 @@
 
 /* Core Content Span */
 .whatwedo-core-content span {
-  visibility: hidden;
   position: absolute;
   width: 70vh;
   height: 70vh;
@@ -216,7 +214,6 @@
 
 /* Outreach Content */
 .whatwedo-outreach-content {
-  visibility: hidden;
   position: absolute;
   width: 73vh;
   height: 100vh;
@@ -231,7 +228,6 @@
 
 /* Outreach Content Span */
 .whatwedo-outreach-content span {
-  visibility: hidden;
   position: absolute;
   width: 70vh;
   height: 70vh;
@@ -301,7 +297,6 @@
 
 /* Projects Content */
 .whatwedo-projects-content {
-  visibility: hidden;
   position: absolute;
   width: 73vh;
   height: 100vh;
@@ -316,7 +311,6 @@
 
 /* Projects Content Span */
 .whatwedo-projects-content span {
-  visibility: hidden;
   position: absolute;
   width: 70vh;
   height: 70vh;
@@ -332,6 +326,7 @@
   letter-spacing: 0.06em;
   color: #000000;
 }
+
 }
 
 
@@ -520,6 +515,7 @@
   z-index: 20;
 
   background: white;
+
 }
 
 /* Outreach Content Span */
