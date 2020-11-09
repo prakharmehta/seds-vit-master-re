@@ -103,7 +103,7 @@ nav {
     margin-right: 10vw;
   }
   .nav-links {
-    position: fixed;
+    position: absolute;
     right: 0px;
     height: 92vh;
     top: 8vh;
@@ -128,6 +128,7 @@ nav {
   transform: translateX(0%);
   transition: transform 0.5s ease-in;
   animation: navLinkFade;
+  /* position: absolute; */
 }
 
 @keyframes navLinkFade {
