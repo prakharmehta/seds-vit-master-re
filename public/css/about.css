@@ -24,9 +24,6 @@
 }
 
 /* body */
-hr {
-  margin-left: 70px;
-}
 
 .about-container {
   display: flex;
@@ -40,21 +37,22 @@ hr {
 .about-upper-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap-reverse;
-  margin-top: 60px;
-  height: 80%;
+  /* flex-wrap: wrap-reverse; */
+  justify-content: space-around;
+  align-items: center;
+  flex:1;
 }
 
 .about-team-picture {
   flex: 1;
-  flex: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .about-team-picture img {
-  width: 594px;
-  height: 354.7px;
+  width: 35vw;
+  height: auto;
   box-shadow: 25px 15px #a5a5a5;
   -moz-box-shadow: 25px 15px #a5a5a5;
   -webkit-box-shadow: 25px 15px #a5a5a5;
@@ -65,51 +63,95 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
   flex: 1;
 }
 
 .about-sub-heading {
   margin: auto;
-  margin-left: 100px;
+}
+
+.about-about-heading {
+  flex: 2;
 }
 
 .about-about-heading span {
   font-family: "Acherus Grotesque Regular";
   font-style: normal;
   font-weight: bold;
-  font-size: 100pt;
-  line-height: 126px;
-  letter-spacing: 0.065em;
+  font-size: 10vw;
+  /* line-height: 126px; */
+  letter-spacing: 0.065rem;
   text-transform: capitalize;
   color: #000000;
 }
 
-.about-seds-heading span {
+.about-seds-heading {
   font-family: "Acherus Grotesque Regular";
   font-style: normal;
   font-weight: bold;
-  font-size: 50pt;
-  line-height: 126px;
-  letter-spacing: 1.63em;
+  font-size: 4vw;
+  display: flex;
+  justify-content: space-between;
+  line-height: 8vw;
+  /* letter-spacing: 1.63em; */
   text-transform: capitalize;
   color: #000000;
+  flex: 1;
 }
 
 .about-content-container {
-  flex: 1;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   text-align: justify;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vw;
 }
 
 .about-content-container span {
   font-family: "Graphik Regular";
   font-style: normal;
   font-weight: normal;
-  font-size: 18pt;
+  font-size: 1.4vw;
   line-height: 35px;
   letter-spacing: 0.06em;
   color: #000000;
   
+}
+
+@media only screen and (max-width: 1024px)
+{
+  .about-about-heading span {
+    font-size: 15vw;
+  }
+
+  .about-seds-heading {
+    font-size: 7.5vw;
+    line-height: 10vw;
+  }
+
+  .about-team-picture {
+    flex: 2;
+  }
+
+  .about-team-picture img {
+    /* width: auto; */
+    width: 80vw;
+    margin-top: 5vh;
+  }
+
+  .about-upper-container {
+    margin-top: 5vh;
+    flex-direction: column-reverse;
+    height: 60vh;
+  }
+
+  .about-content-container {
+    margin-top: 5vh;
+  }
+
+  .about-content-container span {
+    font-size: 3vw;
+    line-height: 2.5vh;
+  }
 }
