@@ -25,10 +25,12 @@ $(".whatwedo-core-grad").click(function(){
     $(".whatwedo-heading").css('z-index', 101);
   }
   else if (isEven(count) === true && $(window).width()<768) {
-    $(".whatwedo-core-content").animate({top: '500vh'}, 2000);
-    $(".whatwedo-core-content").css('z-index', -10);
-    $(".whatwedo-core-content").css('visibility', 'hidden');
-    $("#whatwedo-core-content-span").css('visibility', 'hidden');
+    $(".whatwedo-core-content").animate({top: '500vh'}, function() {
+      $(".whatwedo-core-content").css('z-index', -10);
+      }, function() {
+        $(".whatwedo-core-content").css('visibility', 'hidden');
+        $("#whatwedo-core-content-span").css('visibility', 'hidden');
+        });
   }
 });
 
@@ -74,14 +76,18 @@ $(".whatwedo-outreach-grad").click(function(){
   }
 
   else if (isEven(count) === true && $(window).width()<768) {
-    $(".whatwedo-outreach-content").animate({top: '500vh'});
-    $(".whatwedo-outreach-content").css('z-index', -10);
-    $(".whatwedo-outreach-container").animate({top: '442vh'});
-    $(".whatwedo-outreach-container").css('z-index', 9);
-    $(".whatwedo-outreach-grad").animate({top: '442vh'});
-    $(".whatwedo-outreach-grad").css('z-index', 9);
-    $(".whatwedo-outreach-content").css('visibility', 'hidden');
-    $("#whatwedo-outreach-content-span").css('visibility', 'hidden');
+    $(".whatwedo-outreach-content").animate({top: '500vh'}, function() {
+      $(".whatwedo-outreach-content").css('z-index', -10);
+      }, function() {
+        $(".whatwedo-outreach-content").css('visibility', 'hidden');
+        $("#whatwedo-outreach-content-span").css('visibility', 'hidden');
+      });
+    $(".whatwedo-outreach-container").animate({top: '442vh'}, function() {
+      $(".whatwedo-outreach-container").css('z-index', 9);
+    });
+    $(".whatwedo-outreach-grad").animate({top: '442vh'}, function() {
+      $(".whatwedo-outreach-grad").css('z-index', 9);
+    });
   }
 });
 
@@ -106,11 +112,11 @@ $(".whatwedo-projects-grad").click(function(){
   if (isEven(count) === false && $(window).width()<768) {
     $(".whatwedo-projects-content").css('visibility', 'visible');
     $("#whatwedo-projects-content-span").css('visibility', 'visible');
-    $(".whatwedo-projects-container").animate({top: '414vh'}, 1000);
+    $(".whatwedo-projects-container").animate({top: '414vh'});
     $(".whatwedo-projects-container").css('z-index', 11);
-    $(".whatwedo-projects-grad").animate({top: '413vh'}, 900);
+    $(".whatwedo-projects-grad").animate({top: '413vh'});
     $(".whatwedo-projects-grad").css('z-index', 100);
-    $(".whatwedo-projects-content").animate({top: '442vh'}, 1050);
+    $(".whatwedo-projects-content").animate({top: '442vh'});
     $(".whatwedo-projects-content").css('z-index', 100);
   }
 
@@ -130,14 +136,18 @@ $(".whatwedo-projects-grad").click(function(){
   }
 
   else if (isEven(count) === true && $(window).width()<768) {
-    $(".whatwedo-projects-content").animate({top: '500vh'});
-    $(".whatwedo-projects-content").css('z-index', -10);
-    $(".whatwedo-projects-container").animate({top: '473vh'});
-    $(".whatwedo-projects-container").css('z-index', 9);
-    $(".whatwedo-projects-grad").animate({top: '471vh'});
-    $(".whatwedo-projects-grad").css('z-index', 9);
-    $(".whatwedo-projects-content").css('visibility', 'hidden');
-    $("#whatwedo-projects-content-span").css('visibility', 'hidden');
+    $(".whatwedo-projects-content").animate({top: '500vh'}, function() {
+      $(".whatwedo-projects-content").css('z-index', -10);
+    }, function() {
+        $(".whatwedo-projects-content").css('visibility', 'hidden');
+        $("#whatwedo-projects-content-span").css('visibility', 'hidden');
+    });
+    $(".whatwedo-projects-container").animate({top: '473vh'}, function() {
+      $(".whatwedo-projects-container").css('z-index', 9);
+    });
+    $(".whatwedo-projects-grad").animate({top: '471vh'}, function() {
+      $(".whatwedo-projects-grad").css('z-index', 9);
+    });
   }
 });
 });
