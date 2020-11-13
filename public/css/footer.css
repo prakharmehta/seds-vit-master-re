@@ -1,0 +1,158 @@
+/* .footer__external {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: -9999999999999;
+} */
+
+.footer {
+  display: flex;
+  height: 25vh;
+  background-color: white;
+  /* margin-top: -5vh; */
+}
+
+.footer__follow__us,
+.footer__reach__us,
+.footer__logo__and__dev {
+  display: flex;
+  /* background-color: white; */
+}
+
+.footer__logo__and__dev {
+  flex-direction: column;
+}
+
+.footer__follow__us,
+.footer__reach__us {
+  flex: 1;
+  /* height: 69%; */
+  width: 33vw;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vw;
+}
+
+.footer__follow__us__icons,
+.footer__reach__us__icons {
+  flex: 2;
+  display: flex;
+  /* flex-direction: column; */
+  width: inherit;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__follow__us__text,
+.footer__reach__us__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.hr {
+  background: #3940d0;
+  border: 0.2vw solid #3940d0;
+  width: 10vw;
+}
+
+.footer__heading {
+  display: block;
+  width: 13vw;
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.footer__logo__and__dev {
+  /* flex: 0.4; */
+  align-items: center;
+  justify-content: space-around;
+  /* height: 20vh; */
+  background-color: white;
+  /* margin-top: 7.5vh; */
+}
+
+.footer__logo {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  border: 1.5vw solid white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -7.5vw;
+}
+
+.footer__logo img {
+  width: 10vw;
+}
+
+.footer__dev {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8vw;
+  text-align: center;
+  line-height: 1vw;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+  background-color: white;
+  color: #a5a5a5;
+}
+
+.footer__reach__us__icons__icon {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__reach__us__icons__mail {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1vw;
+  line-height: 1.5vw;
+  letter-spacing: 0.1em;
+  flex: 4;
+}
+
+.footer__icon img {
+  width: 3.5vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    height: 12vh;
+  }
+
+  .footer__icon img {
+    width: 5vw;
+  }
+
+  .footer__logo {
+    margin-top: -5vh;
+  }
+
+  .footer__dev {
+    width: 75%;
+  }
+}
