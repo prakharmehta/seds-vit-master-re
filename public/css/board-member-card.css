@@ -51,8 +51,7 @@
 
 .board__card__blue__profile__pic {
   flex: 1;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   height: auto;
 }
 
@@ -158,4 +157,50 @@
 
 .board__card__blue__profile__info__social .fa {
     color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .board__card__blue {
+    width: 250px;
+    height: 80vh;
+  }
+
+  .board__card__blue__designation {
+    text-align: center;
+  }
+
+  .board__card__blue__designation span{
+    padding-left: 0.2em;
+  }
+
+  .board__card__blue__profile__pic img {
+    width: 30vh;
+    height: 30vh;
+  }
+
+  .board__card__blue__profile__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .board__card__blue__profile {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .board__card__blue__profile__info__name span{
+    padding-left: 0.225em;
+    font-size: 20px;
+  }
+
+  .board__card__blue__profile__info__quote {
+    height: 120px;
+  }
+
+  .board__card__blue__profile__info__quote__comma {
+    font-size: 40px;
+  }
+
+
 }
