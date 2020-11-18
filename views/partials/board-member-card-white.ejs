@@ -1,14 +1,14 @@
 <div class="board__card__white">
     <div class="board__card__white__designation">
-      <span>Manager</span>
+      <span><%= members[i].designation %></span>
     </div>
     <div class="board__card__white__profile">
       <div class="board__card__white__profile__pic">
-        <img src="https://sedsindia.org/sedsvit/pics/Board/Mittal.png" alt="" />
+        <img src="<%= members[i].prof_pic %>" alt="" />
       </div>
       <div class="board__card__white__profile__info">
         <div class="board__card__white__profile__info__name">
-          <span>Adittya<br>Mittal</span>
+          <span><%= members[i].name %></span>
           <div class="board__card__white__profile__info__name__underline">
             <div
               class="board__card__white__profile__info__name__underline__hr"
@@ -30,7 +30,7 @@
               <div style="transform: rotate(180deg);">PERSPECTIVE</div>
               isn't! -->
             <div>
-              Make your life worth watching when it flashes before your eyes.
+              <%= members[i].quote %>
             </div>
           </div>
           <div
@@ -41,13 +41,13 @@
         </div>
         <div class="board__card__white__profile__info__social">
           <div class="board__card__white__profile__info__social__link">
-              <a href=""><i class="fa fa-instagram"></i></a>
+              <a href="<%= members[i].social.insta %>"><i class="fa fa-instagram"></i></a>
           </div>
           <div class="board__card__white__profile__info__social__link">
-              <a href=""><i class="fa fa-envelope"></i></a>
+              <a href="<%= members[i].social.gmail %>"><i class="fa fa-envelope"></i></a>
           </div>
           <div class="board__card__white__profile__info__social__link">
-              <a href=""><i class="fa fa-linkedin"></i></a>
+              <a href="<%= members[i].social.linkedin %>"><i class="fa fa-linkedin"></i></a>
           </div>
         </div>
       </div>
