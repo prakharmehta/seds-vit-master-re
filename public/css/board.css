@@ -14,8 +14,15 @@ body {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  margin-top: 5%;
-  margin-bottom: 2.5%;
+  position: sticky;
+  top: 8vh;
+  height: 17.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(black, black, transparent);
+  width: 100%;
+  z-index: 1;
 }
 
 .board__members {
