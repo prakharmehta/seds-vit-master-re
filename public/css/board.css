@@ -16,7 +16,7 @@ body {
   text-transform: uppercase;
   position: sticky;
   top: 8vh;
-  height: 17.5vh;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,4 +88,5 @@ body {
 
 .row--white:last-child .dept__name--white{
   height: 580px;
+  margin-bottom: 22px;
 }
