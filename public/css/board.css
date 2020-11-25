@@ -85,3 +85,7 @@ body {
 .dept__name--blue span {
   transform: rotate(90deg);
 }
+
+.row--white:last-child .dept__name--white{
+  height: 580px;
+}

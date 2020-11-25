@@ -1,0 +1,210 @@
+/* Web fonts */
+@font-face {
+    font-family: "Acherus Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Acherus Grotesque Regular"),
+      url("../fonts/AcherusGrotesqueRegular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Acherus Grotesque Regular Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Acherus Grotesque Regular Italic"),
+      url("../fonts/AcherusGrotesqueRegularItalic.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Graphik Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Graphik Regular"),
+      url("../fonts/GraphikRegular.woff2") format("woff2");
+  }
+  
+  .board__card__marketing {
+    display: flex;
+    flex-direction: column;
+    width: 304.67px;
+    height: 540px;
+    background: #ffffff;
+    padding: 20px 25px 20px 25px;
+  }
+  
+  .board__card__marketing__designation {
+    color: #120C6E;
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .board__card__marketing__profile {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+  }
+  
+  .board__card__marketing__profile__pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  .board__card__marketing__profile__pic img {
+    width: 225px;
+    height: 225px;
+  }
+  
+  .board__card__marketing__profile__info {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  
+  .board__card__marketing__profile__info__name {
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 125%;
+    color: #120C6E;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .board__card__marketing__profile__info__name__underline {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around!important;
+    align-items: center;
+    width: 230px;
+  }
+  
+  .board__card__marketing__profile__info__name__underline__hr {
+    width: 100px;
+    height: 2px;
+    /* border: 2px solid #FFBE85; */
+    background: #3940D0;
+  }
+  
+  .board__card__marketing__profile__info__name__underline__dot {
+    width: 5px;
+    height: 5px;
+    background: #3940D0;
+    border-radius: 10px;
+  }
+  
+  .board__card__marketing__profile__info__quote {
+    position: relative;
+    height: 135px;
+    width: 205px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .board__card__marketing__profile__info__quote__comma {
+    width: 20px;
+    height: 30px;
+    font-family: "Grenze", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 39.5%;
+    letter-spacing: 0.01em;
+    color: #3940D0;
+  }
+  
+  .comma--left {
+    position: absolute;
+    top: 10;
+    left: 0;
+  }
+  
+  .board__card__marketing__profile__info__quote__text {
+    font-family: "Graphik Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .comma--right {
+    position: absolute;
+    bottom: -20;
+    right: 0;
+  }
+  
+  .board__card__marketing__profile__info__social {
+      display: flex;
+      width: 205px;
+      justify-content: space-evenly;
+  }
+  
+  .board__card__marketing__profile__info__social .fa {
+      color: #120C6E;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .board__card__marketing {
+      width: 250px;
+      height: 80vh;
+    }
+  
+    .board__card__marketing__designation {
+      text-align: center;
+    }
+  
+    .board__card__marketing__designation span{
+      padding-left: 0.2em;
+    }
+  
+    .board__card__marketing__profile__pic img {
+      width: 30vh;
+      height: 30vh;
+    }
+  
+    .board__card__marketing__profile__pic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .board__card__marketing__profile {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .board__card__marketing__profile__info__name span{
+      padding-left: 0.225em;
+      font-size: 20px;
+    }
+  
+    .board__card__marketing__profile__info__quote {
+      height: 120px;
+    }
+  
+    .board__card__marketing__profile__info__quote__comma {
+      font-size: 40px;
+    }
+  
+  }
+  

@@ -1,254 +1,267 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
-    <link rel="stylesheet" href="css/board-member-card-blue.css" />
-    <link rel="stylesheet" href="css/board-member-card-white.css" />
-    <link rel="stylesheet" href="css/board.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <% const members = [
-    {
-      color: "blue",
-      dept: "",
-      prof_pic: "img/Board/Megha.png",
-      designation: "CHAIR",
-      name: "MEGHA CHOUDHARY",
-      quote: "It is our choices that show what we truly are, far more than our abilities.",
-      social: {
-        insta: "https://www.instagram.com/megha_avidreader/",
-        gmail: "mailto: megha.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/megha-choudhary-58661017b/"
-      }
-    },
-    {
-      color: "white",
-      dept: "EVENTS AND<br>WORKSHOPS",
-      prof_pic: "img/Board/Akhil.png",
-      designation: "DIRECTOR",
-      name: "AKHIL SAXENA",
-      quote: "The days are long, but the years are short.",
-      social: {
-        insta: "https://www.instagram.com/_akhilsaxena/",
-        gmail: "mailto: akhilsaxena.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/akhil-saxena/"
-      }
-    },
-    {
-      color: "white",
-      dept: "EVENTS AND<br>WORKSHOPS",
-      prof_pic: "img/Board/DVR.png",
-      designation: "MANAGER",
-      name: "D.V.R. Aditya",
-      quote: "Once you question your own belief, it's over.",
-      social: {
-        insta: "https://www.instagram.com/dvraditya/",
-        gmail: "mailto: dvraditya.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/dvr-aditya-bb961017b/"
-      }
-    },
-    {
-      color: "blue",
-      dept: "OUTREACH",
-      prof_pic: "img/Board/Chaitanya.png",
-      designation: "DIRECTOR",
-      name: "CHAITANYA KRISHNA",
-      quote: "What you learn in the process is more important than the final result.",
-      social: {
-        insta: "https://www.instagram.com/chaitanya_.krishna/",
-        gmail: "mailto: chaitanya.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/chaitanya-krishna-50b61117b"
-      }
-    },
-    {
-      color: "blue",
-      dept: "OUTREACH",
-      prof_pic: "img/Board/VMT.png",
-      designation: "MANAGER",
-      name: "VIKAS TRIPATHI",
-      quote: "Dream as big as the universe.",
-      social: {
-        insta: "https://www.instagram.com/___vmt___/",
-        gmail: "mailto: vikas.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/vmt23/"
-      }
-    },
-    {
-      color: "white",
-      dept: "FINANCE",
-      prof_pic: "img/Board/Rishabh.png",
-      designation: "DIRECTOR",
-      name: "RISHABH TIWARI",
-      quote: "To live is to risk it all.",
-      social: {
-        insta: "https://www.instagram.com/rshbhtiwari/",
-        gmail: "mailto: rishabhtiwari.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/rishabh-tiwari-669841168/"
-      }
-    },
-    {
-      color: "white",
-      dept: "FINANCE",
-      prof_pic: "img/Board/Rihaan.png",
-      designation: "MANAGER",
-      name: "Rihaan Satia",
-      quote: "Don't judge a day by the harvest you reap but by the seeds you plant.",
-      social: {
-        insta: "https://www.instagram.com/rihaansatia/",
-        gmail: "mailto: rihaansatia.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/rihaan-satia-2a677017b/"
-      }
-    },
-    {
-      color: "blue",
-      dept: "EDITORIAL AND<br>DOCUMENTATION",
-      prof_pic: "img/Board/Abhirami.png",
-      designation: "DIRECTOR",
-      name: "Abhirami Raman",
-      quote: "A bundle of contradictions, a poem to be read; My dreams are in the stars, therefore I am.",
-      social: {
-        insta: "https://www.instagram.com/abhirami_raman/",
-        gmail: "mailto: abhirami.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/abhirami-raman-2626939a/"
-      }
-    },
-    {
-      color: "blue",
-      dept: "EDITORIAL AND<br>DOCUMENTATION",
-      prof_pic: "img/Board/Sejal.png",
-      designation: "MANAGER",
-      name: "Sejal Budholiya",
-      quote: "Take chances.",
-      social: {
-        insta: "https://www.instagram.com/sejalbudholiya19/",
-        gmail: "mailto: sejal.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/sejal-budholiya-37364b17a/"
-      }
-    },
-    {
-      color: "white",
-      dept: "OPERATIONS AND<br>RESEARCH",
-      prof_pic: "img/Board/Shikhar.png",
-      designation: "DIRECTOR",
-      name: "SHIKHAR CHANDRA",
-      quote: "You need chaos in your soul to give birth to a dancing star.",
-      social: {
-        insta: "https://www.instagram.com/shikhar._12/",
-        gmail: "mailto: shikhar.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/shikhar-chandra-54861017b/"
-      }
-    },
-    {
-      color: "white",
-      dept: "OPERATIONS AND<br>RESEARCH",
-      prof_pic: "img/Board/Aaruni.png",
-      designation: "MANAGER",
-      name: "AARUNI SHARMA",
-      quote: "It does not do to dwell on dreams and forget to live.",
-      social: {
-        insta: "https://www.instagram.com/aaruni__sharma/",
-        gmail: "mailto: aaruni.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/aaruni-sharma62442/"
-      }
-    },
-    {
-      color: "blue",
-      dept: "HUMAN<br>RESOURCES",
-      prof_pic: "img/Board/Nishir.png",
-      designation: "DIRECTOR",
-      name: "NISHIR TRIPATHI",
-      quote: "Don't limit the challenges, challenge the limits!",
-      social: {
-        insta: "https://www.instagram.com/nishir_007/",
-        gmail: "mailto: Nishir.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/nishir-tripathi-777066183"
-      }
-    },
-    {
-      color: "blue",
-      dept: "HUMAN<br>RESOURCES",
-      prof_pic: "img/Board/Mittal.png",
-      designation: "MANAGER",
-      name: "Adittya Mittal",
-      quote: "Make your life worth watching when it flashes before your eyes.",
-      social: {
-        insta: "https://www.instagram.com/adittya_mittal/",
-        gmail: "mailto: adittya.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/adittya-mittal-34a494180/"
-      }
-    },
-    {
-      color: "white",
-      dept: "MARKETING AND MEDIA",
-      prof_pic: "img/Board/Shirish.png",
-      designation: "DIRECTOR",
-      name: "Shirish Kulkarni",
-      quote: "It is important to draw wisdom from many different places. If we take it from only one place, it becomes rigid and stale.",
-      social: {
-        insta: "https://instagram.com/shirish.kulkarnii?igshid=yu8gnj4b46ie",
-        gmail: "mailto: shirish.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/shirish-kulkarni-811386179"
-      }
-    },
-    {
-      color: "white",
-      dept: "MARKETING AND MEDIA",
-      prof_pic: "img/Board/Prakhar.png",
-      designation: "MANAGER",
-      name: "Prakhar Mehta",
-      quote:"Quote",
-      social: {
-        insta: "https://www.instagram.com/prakharnmehta/",
-        gmail: "mailto: prakhar.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/prakhar-mehta-983494180"
-      }
-    },
-    {
-      color: "white",
-      dept: "MARKETING AND MEDIA",
-      prof_pic: "img/Board/Vasav.png",
-      designation: "MANAGER",
-      name: "Vasavdatta Chakraborty",
-      quote: "True happiness and unbridled fear cannot cohabitate.",
-      social: {
-        insta: "https://www.instagram.com/_._vasav/",
-        gmail: "mailto: vasavdatta.sedsvit@gmail.com",
-        linkedin: "https://www.linkedin.com/in/vasavdatta-chakraborty-b6160b17b"
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+  <link rel="stylesheet" href="css/board-member-card-blue.css" />
+  <link rel="stylesheet" href="css/board-member-card-white.css" />
+  <link rel="stylesheet" href="css/board-member-card-marketing.css" />
+  <link rel="stylesheet" href="css/board.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <%- include ('partials/navbar.ejs') %>
+  <% const members = [
+  {
+    color: "blue",
+    dept: "",
+    prof_pic: "img/Board/Megha.png",
+    designation: "CHAIR",
+    name: "MEGHA CHOUDHARY",
+    quote: "It is our choices that show what we truly are, far more than our abilities.",
+    social: {
+      insta: "https://www.instagram.com/megha_avidreader/",
+      gmail: "mailto: megha.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/megha-choudhary-58661017b/"
     }
-    ]; %>
-    <%- include ('partials/navbar.ejs') %>
-    <div class="board__members">
-      <div class="board__heading">
-        <h1>The team that makes it possible</h1>
-      </div>
-      <div class="dept__row" style="align-items: center; justify-content: center;">
-        <%- include ('partials/board-member-card-blue-chair.ejs', {members: members, i: 0})%>
-      </div>
+  },
+  {
+    color: "white",
+    dept: "EVENTS AND<br>WORKSHOPS",
+    prof_pic: "img/Board/Akhil.png",
+    designation: "DIRECTOR",
+    name: "AKHIL SAXENA",
+    quote: "The days are long, but the years are short.",
+    social: {
+      insta: "https://www.instagram.com/_akhilsaxena/",
+      gmail: "mailto: akhilsaxena.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/akhil-saxena/"
+    }
+  },
+  {
+    color: "white",
+    dept: "EVENTS AND<br>WORKSHOPS",
+    prof_pic: "img/Board/DVR.png",
+    designation: "MANAGER",
+    name: "D.V.R. Aditya",
+    quote: "Once you question your own belief, it's over.",
+    social: {
+      insta: "https://www.instagram.com/dvraditya/",
+      gmail: "mailto: dvraditya.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/dvr-aditya-bb961017b/"
+    }
+  },
+  {
+    color: "blue",
+    dept: "OUTREACH",
+    prof_pic: "img/Board/Chaitanya.png",
+    designation: "DIRECTOR",
+    name: "CHAITANYA KRISHNA",
+    quote: "What you learn in the process is more important than the final result.",
+    social: {
+      insta: "https://www.instagram.com/chaitanya_.krishna/",
+      gmail: "mailto: chaitanya.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/chaitanya-krishna-50b61117b"
+    }
+  },
+  {
+    color: "blue",
+    dept: "OUTREACH",
+    prof_pic: "img/Board/VMT.png",
+    designation: "MANAGER",
+    name: "VIKAS TRIPATHI",
+    quote: "Dream as big as the universe.",
+    social: {
+      insta: "https://www.instagram.com/___vmt___/",
+      gmail: "mailto: vikas.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/vmt23/"
+    }
+  },
+  {
+    color: "white",
+    dept: "FINANCE",
+    prof_pic: "img/Board/Rishabh.png",
+    designation: "DIRECTOR",
+    name: "RISHABH TIWARI",
+    quote: "To live is to risk it all.",
+    social: {
+      insta: "https://www.instagram.com/rshbhtiwari/",
+      gmail: "mailto: rishabhtiwari.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/rishabh-tiwari-669841168/"
+    }
+  },
+  {
+    color: "white",
+    dept: "FINANCE",
+    prof_pic: "img/Board/Rihaan.png",
+    designation: "MANAGER",
+    name: "Rihaan Satia",
+    quote: "Don't judge a day by the harvest you reap but by the seeds you plant.",
+    social: {
+      insta: "https://www.instagram.com/rihaansatia/",
+      gmail: "mailto: rihaansatia.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/rihaan-satia-2a677017b/"
+    }
+  },
+  {
+    color: "blue",
+    dept: "EDITORIAL AND<br>DOCUMENTATION",
+    prof_pic: "img/Board/Abhirami.png",
+    designation: "DIRECTOR",
+    name: "Abhirami Raman",
+    quote: "A bundle of contradictions, a poem to be read; My dreams are in the stars, therefore I am.",
+    social: {
+      insta: "https://www.instagram.com/abhirami_raman/",
+      gmail: "mailto: abhirami.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/abhirami-raman-2626939a/"
+    }
+  },
+  {
+    color: "blue",
+    dept: "EDITORIAL AND<br>DOCUMENTATION",
+    prof_pic: "img/Board/Sejal.png",
+    designation: "MANAGER",
+    name: "Sejal Budholiya",
+    quote: "Take chances.",
+    social: {
+      insta: "https://www.instagram.com/sejalbudholiya19/",
+      gmail: "mailto: sejal.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/sejal-budholiya-37364b17a/"
+    }
+  },
+  {
+    color: "white",
+    dept: "OPERATIONS AND<br>RESEARCH",
+    prof_pic: "img/Board/Shikhar.png",
+    designation: "DIRECTOR",
+    name: "SHIKHAR CHANDRA",
+    quote: "You need chaos in your soul to give birth to a dancing star.",
+    social: {
+      insta: "https://www.instagram.com/shikhar._12/",
+      gmail: "mailto: shikhar.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/shikhar-chandra-54861017b/"
+    }
+  },
+  {
+    color: "white",
+    dept: "OPERATIONS AND<br>RESEARCH",
+    prof_pic: "img/Board/Aaruni.png",
+    designation: "MANAGER",
+    name: "AARUNI SHARMA",
+    quote: "It does not do to dwell on dreams and forget to live.",
+    social: {
+      insta: "https://www.instagram.com/aaruni__sharma/",
+      gmail: "mailto: aaruni.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/aaruni-sharma62442/"
+    }
+  },
+  {
+    color: "blue",
+    dept: "HUMAN<br>RESOURCES",
+    prof_pic: "img/Board/Nishir.png",
+    designation: "DIRECTOR",
+    name: "NISHIR TRIPATHI",
+    quote: "Don't limit the challenges, challenge the limits!",
+    social: {
+      insta: "https://www.instagram.com/nishir_007/",
+      gmail: "mailto: Nishir.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/nishir-tripathi-777066183"
+    }
+  },
+  {
+    color: "blue",
+    dept: "HUMAN<br>RESOURCES",
+    prof_pic: "img/Board/Mittal.png",
+    designation: "MANAGER",
+    name: "Adittya Mittal",
+    quote: "Make your life worth watching when it flashes before your eyes.",
+    social: {
+      insta: "https://www.instagram.com/adittya_mittal/",
+      gmail: "mailto: adittya.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/adittya-mittal-34a494180/"
+    }
+  },
+  {
+    color: "white",
+    dept: "MARKETING AND MEDIA",
+    prof_pic: "img/Board/Shirish.png",
+    designation: "DIRECTOR",
+    name: "Shirish Kulkarni",
+    quote: "It is important to draw wisdom from many different places. If we take it from only one place, it becomes rigid and stale.",
+    social: {
+      insta: "https://instagram.com/shirish.kulkarnii?igshid=yu8gnj4b46ie",
+      gmail: "mailto: shirish.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/shirish-kulkarni-811386179"
+    }
+  },
+  {
+    color: "white",
+    dept: "MARKETING AND MEDIA",
+    prof_pic: "img/Board/Prakhar.png",
+    designation: "MANAGER",
+    name: "Prakhar Mehta",
+    quote:'',
+    social: {
+      insta: "https://www.instagram.com/prakharnmehta/",
+      gmail: "mailto: prakhar.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/prakhar-mehta-983494180"
+    }
+  },
+  {
+    color: "white",
+    dept: "MARKETING AND MEDIA",
+    prof_pic: "img/Board/Vasav.png",
+    designation: "MANAGER",
+    name: "Vasavdatta Chakraborty",
+    quote: "True happiness and unbridled fear cannot cohabitate.",
+    social: {
+      insta: "https://www.instagram.com/_._vasav/",
+      gmail: "mailto: vasavdatta.sedsvit@gmail.com",
+      linkedin: "https://www.linkedin.com/in/vasavdatta-chakraborty-b6160b17b"
+    }
+  }
+  ];
+  %>
+  <div class="board__members">
+    <div class="board__heading">
+      <h1>The team that makes it possible</h1>
+    </div>
+    <div class="dept__row" style="align-items: center; justify-content: center;">
+      <%- include ('partials/board-member-card-blue-chair.ejs', {members: members, i: 0})%>
+    </div>
     <% let i; %>
     <% for(i = 1; i < 12; i = i+1) { %>
-      <% if(members[i].color == 'white') { %>
-        <div class="dept__row row--white">
-          <div class="dept__name dept__name--white"><span><%- members[i].dept %></span></div>
-          <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
-          <% i++; %>
-          <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
-        </div>
-      <% } else if(members[i].color == 'blue') { %>
-        <div class="dept__row row--blue">
-          <div class="dept__name dept__name--blue"><span><%- members[i].dept %></span></div>
-          <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
-          <% i++; %>
-          <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
-        </div>
-      <% } %>
-    <% } %>
+    <% if(members[i].color == 'white') { %>
+    <div class="dept__row row--white">
+      <div class="dept__name dept__name--white"><span><%- members[i].dept %></span></div>
+      <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
+      <% i++; %>
+      <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
     </div>
-  </body>
+    <% } else if(members[i].color == 'blue') { %>
+    <div class="dept__row row--blue">
+      <div class="dept__name dept__name--blue"><span><%- members[i].dept %></span></div>
+      <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
+      <% i++; %>
+      <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
+    </div>
+    <% } %>
+    <% } %>
+    <div class="dept__row row--white">
+      <div class="dept__name dept__name--white"><span><%- members[i].dept %></span></div>
+      <% for(i = 13; i < 16;) { %>
+      <%- include ('partials/board-member-card-marketing.ejs', {members: members, i: i})%>
+      <% i++; %>
+      <% } %>
+    </div>
+  </div>
+  <script>
+    let prakharQuote = document.querySelector('#member14 .board__card__marketing__profile__info__quote__text div');
+    prakharQuote.innerHTML = `<span>Life is simple. Our</span><div style="transform: rotate(180deg);">PERSPECTIVE</div><span>isn't!</span>`;
+  </script>
+</body>
+
 </html>
