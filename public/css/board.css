@@ -35,9 +35,9 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  width: 1206px;
-  margin-top: 11px;
-  margin-bottom: 11px;
+  width: 69.07vw;
+  margin-top: 0.63vw;
+  margin-bottom: 0.63vw;
 }
 
 .row--blue {
@@ -56,26 +56,26 @@ body {
   font-family: "Acherus Grotesque Regular";
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.432vw;
   line-height: 120%;
   letter-spacing: 0.14em;
-  min-height: 299px !important;
-  width: 80px;
+  min-height: 17.125vw !important;
+  width: 4.58vw;
   white-space: nowrap;
 }
 
 .dept__name--blue {
   background: #120c6e;
   color: #ffffff;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0.86vw;
+  border-bottom-left-radius: 0.86vw;
 }
 
 .dept__name--white {
   background: #ffffff;
   color: #120c6e;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-left-radius: 0.86vw;
+  border-bottom-right-radius: 0.86vw;
 }
 
 .dept__name--white span {
@@ -86,7 +86,160 @@ body {
   transform: rotate(90deg);
 }
 
-.row--white:last-child .dept__name--white{
-  height: 580px;
-  margin-bottom: 22px;
+.row--white:last-child .dept__name--white {
+  height: 33.219vw;
+  margin-bottom: 1.26vw;
+}
+
+.board__members--mobile {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .board__members {
+    display: none;
+  }
+
+  .board__members--mobile {
+    display: flex;
+  }
+
+  .board__heading {
+    font-size: 2.5vw;
+    line-height: 250%;
+    width: 80%;
+    height: 20vh;
+  }
+
+  .dept__name {
+    width: 34.9vw;
+    height: 61.84vw;
+    padding: 2.29vw 2.864vw;
+    font-size: 2.864vw;
+    white-space: normal;
+  }
+
+  .dept__name--white span {
+    transform: rotate(0deg);
+  }
+
+  .dept__name--blue span {
+    transform: rotate(0deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.slider {
+  width: 400px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -400px;
+  width: 10000px;
+}
+
+.slides.shifting {
+  transition: left 0.2s ease-out;
+}
+
+.slide {
+  min-width: 400px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 4;
+}
+
+.carousel__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  position: absolute;
+  width: 80vw;
+}
+
+.prev,
+.next {
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.prev {
+  background-image: url(../img/left-arrow.svg);
+  left: -20px;
+}
+
+.next {
+  background-image: url(../img/right-arrow.svg);
+  right: -20px;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 540px) {
+  .dept__name {
+    width: 27vh;
+    height: 61.84vh;
+    padding: 2.29vh 2.864vh;
+    font-size: 2.5vh;
+  }
+
+  .dept__name--blue {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .dept__name--white {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .carousel__controls {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .carousel__controls {
+    width: 95vw;
+  }
 }
