@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Document</title>
+
 </head>
 
 <body>
@@ -258,10 +259,59 @@
       <% } %>
     </div>
   </div>
-  <script>
-    let prakharQuote = document.querySelector('#member14 .board__card__marketing__profile__info__quote__text div');
-    prakharQuote.innerHTML = `<span>Life is simple. Our</span><div style="transform: rotate(180deg);">PERSPECTIVE</div><span>isn't!</span>`;
-  </script>
+  <div class="carousel-container board__members--mobile ">
+    <div class="board__heading">
+      <h1>The team that makes it possible</h1>
+    </div>
+    <div id="slider" class="slider">
+      <div class="wrapper">
+        <div id="slides" class="slides">
+          <div class="slide">
+            <%- include ('partials/board-member-card-blue-chair.ejs', {members: members, i: 0})%>
+          </div>
+          <% for(i = 1; i < 13;i++) { %>
+          <% if(members[i].color == 'white') {%>
+          <div class="slide">
+            <div class="dept__name dept__name--white"><span><%- members[i].dept %></span></div>
+          </div>
+          <div class="slide">
+            <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
+          </div>
+          <% i++; %>
+          <div class="slide">
+            <%- include ('partials/board-member-card-white.ejs', {members: members, i: i})%>
+          </div>
+          <% } else if(members[i].color == 'blue') { %>
+          <div class="slide">
+            <div class="dept__name dept__name--blue"><span><%- members[i].dept %></span></div>
+          </div>
+          <div class="slide">
+            <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
+          </div>
+          <% i++; %>
+          <div class="slide">
+            <%- include ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
+          </div>
+          <% } %>
+          <% } %>
+          <div class="slide">
+            <div class="dept__name dept__name--white"><span><%- members[i].dept %></span></div>
+          </div>
+          <% for(i = 13; i < 16;) { %>
+          <div class="slide">
+            <%- include ('partials/board-member-card-marketing.ejs', {members: members, i: i})%>
+          </div>
+          <% i++; %>
+          <% } %>
+        </div>
+      </div>
+      <div class="carousel__controls">
+        <a id="prev" class="control prev"></a>
+        <a id="next" class="control next"></a>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/carousel.js"></script>
 </body>
 
 </html>
