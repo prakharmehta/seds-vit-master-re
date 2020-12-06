@@ -1,0 +1,284 @@
+/* Web fonts */
+@font-face {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular"),
+    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular Italic"),
+    url("../fonts/AcherusGrotesqueRegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Regular"),
+    url("../fonts/GraphikRegular.woff2") format("woff2");
+}
+
+/* Carousel */
+.slider {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: .5;
+}
+
+.slick-current {
+  opacity: 1;
+}
+
+/* Events Parent Container */
+.events-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 80vh;
+
+  background: #FFFFFF;
+}
+
+/* Events Heading Container */
+.events-heading {
+  margin-top: 5vh;
+  flex: 1;
+  font-family: "Acherus Grotesque Regular";
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.8vh;
+  text-align: center;
+  margin-bottom: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop View: Content Container, Gravitas Carousel & Flagship Carousel */
+@media only screen and (min-width: 670px) {
+.events-parent {
+  flex: 2;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#events-gravitas-carousel {
+  flex: 2;
+
+  width: 35vw;
+  height: 55vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+
+#events-flagship-carousel {
+  flex: 2;
+
+  width: 35vw;
+  height: 55vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+}
+
+/* Small Desktop View: Content Container, Gravitas Carousel & Flagship Carousel */
+@media only screen and (max-width: 670px) and (min-width: 470px){
+.events-parent {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#events-gravitas-carousel {
+  flex: 2;
+
+  width: 80vw;
+  height: 65vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+
+#events-flagship-carousel {
+  flex: 2;
+
+  width: 80vw;
+  height: 65vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+}
+
+/* Mobile View: Content Container, Gravitas Carousel & Flagship Carousel */
+@media only screen and (max-width: 470px) {
+.events-parent {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#events-gravitas-carousel {
+  flex: 2;
+
+  width: 80vw;
+  height: 45vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+
+#events-flagship-carousel {
+  flex: 2;
+
+  width: 80vw;
+  height: 45vh;
+
+  border-radius: 5px 5px 5px 5px;
+  filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+}
+}
+
+/* Gravitas Content Container */
+.events-gravitas {
+  flex: 1;
+  flex-grow: 1;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* Gravitas Heading Container */
+.events-gravitas-heading {
+  flex: 1;
+
+  font-family: "Acherus Grotesque Regular";
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.9vh;
+  letter-spacing: 0.065em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2vh;
+}
+
+/* Flagship Content Container */
+.events-flagship {
+  flex: 2;
+  flex-grow: 1;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  overflow: hidden
+}
+
+/* Flagship Heading Container */
+.events-flagship-heading {
+  flex: 1;
+
+  font-family: "Acherus Grotesque Regular";
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.9vh;
+  letter-spacing: 0.065em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2vh;
+}
+
+/* Carousel Images */
+.events-carousel-image-gravitas:hover, .events-carousel-image-flagship:hover {
+  background-color: black;
+  opacity: 0.8;
+}
+
+/* Gravitas Learn More Button */
+.events-gravitas-learn {
+  visibility: hidden;
+  position: absolute;
+  left: 22vw;
+  top: 52.5vh;
+  text-align: center;
+  z-index: 5;
+
+  font-family: "Acherus Grotesque Regular";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vh;
+  text-align: center;
+}
+
+/* Flagship Learn More Button */
+.events-flagship-learn {
+  visibility: hidden;
+  position: absolute;
+  left: 72vw;
+  top: 52.5vh;
+  z-index: 5;
+
+  font-family: "Acherus Grotesque Regular";
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vh;
+  text-align: center;
+}
