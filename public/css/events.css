@@ -114,37 +114,6 @@
     border-radius: 5px 5px 5px 5px;
     filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
   }
-
-  /* Gravitas Learn More Button */
-  .events-gravitas-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 22vw;
-    top: 255vh;
-    text-align: center;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
-  }
-
-  /* Flagship Learn More Button */
-  .events-flagship-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 72vw;
-    top: 255vh;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
-  }
 }
 
 /* Small Desktop View: Content Container, Gravitas Carousel, Flagship Carousel & Learn More Buttons */
@@ -180,37 +149,6 @@
     border-radius: 5px 5px 5px 5px;
     filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
   }
-
-  /* Gravitas Learn More Button */
-  .events-gravitas-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 43vw;
-    top: 312vh;
-    text-align: center;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
-  }
-
-  /* Flagship Learn More Button */
-  .events-flagship-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 43vw;
-    top: 390vh;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
-  }
 }
 
 /* Mobile View: Content Container, Gravitas Carousel, Flagship Carousel & Learn More Buttons */
@@ -245,37 +183,6 @@
 
     border-radius: 5px 5px 5px 5px;
     filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
-  }
-
-  /* Gravitas Learn More Button */
-  .events-gravitas-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 40vw;
-    top: 294vh;
-    text-align: center;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
-  }
-
-  /* Flagship Learn More Button */
-  .events-flagship-learn {
-    visibility: hidden;
-    position: absolute;
-    left: 40vw;
-    top: 352vh;
-    z-index: 5;
-
-    font-family: "Acherus Grotesque Regular";
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2vh;
-    text-align: center;
   }
 }
 
@@ -335,9 +242,39 @@
   justify-content: center;
 }
 
-/* Carousel Images */
-.events-carousel-image-gravitas:hover,
-.events-carousel-image-flagship:hover {
-  background-color: black;
-  opacity: 0.8;
+.events-carousel-image-flagship,
+.events-carousel-image-gravitas {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-more {
+  margin-top: 20px;
+}
+
+.learn-more button {
+  width: initial;
+  border: none;
+  border-left: 5px solid #3940d0;
+  padding: 10px;
+  font-family: "Acherus Grotesque Regular";
+  background: white;
+  font-size: 16px;
+  /* color: #f8d3b5; */
+  color: #3940d0;
+  /* border-radius: 5px; */
+  background: linear-gradient(to right, #3940d0 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  outline: none;
+}
+
+.learn-more button:hover {
+  background-position: left bottom;
+  border: 1px solid #3940d0;
+  color: white;
+  cursor: pointer;
 }
