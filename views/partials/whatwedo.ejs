@@ -1,0 +1,29 @@
+<div class="whatwedo__container" id="whatwedo">
+  <div class="whatwedo__heading">
+    <span>What We Do</span>
+    <hr width="70" color="#3940D0" size="3" />
+  </div>
+  <div class="whatwedo__content row">
+    <% const divisions = [
+    {
+      name: 'CORE',
+      img_src: 'img/core.jpg',
+      content: 'The core committee is responsible for conducting various space-themed conferences, events, and competitions within our campus for students from colleges all over the country. It also collaborates with SEDS India for national-level events which allow the participants to see the space industry as an exciting and viable career option.'
+    },
+    {
+      name: 'OUTREACH',
+      img_src: 'img/outreach.png',
+      content: 'Our Outreach programme extends to the local schools in and around Vellore where we teach the students about how the universe works using interactive teaching methods and an in-depth curriculum. The programme helps us stay true to our mission of arousing interest in space exploration among young students from all backgrounds and empowering them to pursue it further.'
+    },
+    {
+      name: 'PROJECTS',
+      img_src: 'img/projects.jpg',
+      content: 'The Projects division meanwhile focuses on the technical aspects of space exploration by working on individual, or team-projects such as Mars rovers and UAVs for international competitions. Members are encouraged to use their academic learning to pursue their passion and help boost India’s bid to become a space-superpower.'
+    },];
+    %>
+    <% let i;%>
+    <% for(i = 0; i< 3; i++) {%>
+    <div class="col s12 l4"><%- include ('whatwedo-card.ejs', {divisions: divisions, i:i}) %></div>
+    <%}%>
+  </div>
+</div>

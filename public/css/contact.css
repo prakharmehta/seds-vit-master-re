@@ -39,7 +39,7 @@
 
 .contact__form form {
   display: flex;
-  height: 50vh;
+  height: 50vh!important;
   width: 75%;
   flex-direction: column;
   /* align-items: center; */

@@ -1,0 +1,20 @@
+#blog {
+    height: 100vh;
+    background: black;
+    box-sizing: border-box;
+}
+
+.blogs-heading {
+    flex: 1;
+    font-family: "Acherus Grotesque Regular";
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.8vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+  }
