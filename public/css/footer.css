@@ -1,15 +1,32 @@
-/* .footer__external {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    z-index: -9999999999999;
-} */
+.footer__external {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: -999;
+  /* max-height: 40vh; */
+  /* background: black; */
+}
+
+.main {
+  min-height: 100vh;
+
+  /* need a solid bg to hide the footer */
+  background: white;
+
+  /* put on top */
+  position: relative;
+  z-index: 1;
+}
 
 .footer {
   display: flex;
   height: 25vh;
   background-color: white;
-  /* margin-top: -5vh; */
+  margin-bottom: 0;
+  position: sticky;
+  width: 100%;
+  /* z-index: -19; */
+  margin-top: 15vh;
 }
 
 .footer__follow__us,
@@ -136,12 +153,14 @@
 @media screen and (max-width: 1024px) {
   .footer {
     height: 10vh;
+    margin-top: 10vh;
   }
 }
 
 @media screen and (max-width: 767px) {
   .footer {
     height: 12vh;
+    margin-top: 7vh;
   }
 
   .footer__icon img {

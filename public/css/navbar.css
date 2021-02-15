@@ -65,11 +65,16 @@ form {
   border: 1px solid #FFBE85;
   border-radius: 2px;
   width: 100px !important;
-  height: 28px!important;
   text-align: center;
   padding: 5px;
   transition: all 0.2s linear;
   line-height: normal;
+  font-size: 14px!important;
+}
+
+nav * {
+  box-sizing: inherit!important;
+  -webkit-box-sizing: inherit;
 }
 
 .nav-links-conact-us:hover {
@@ -191,4 +196,9 @@ form {
   left: 0;
   right: 0;
   color: #FFBE85;
+}
+
+input:focus {
+  outline: none;
+  text-decoration: none;
 }
