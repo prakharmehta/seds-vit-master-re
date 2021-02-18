@@ -3,15 +3,24 @@
     <span>BLOGS</span>
     <hr width="70" color="#3940D0" size="3" align="center" />
   </div>
-  <div
-    id="retainable-rss-embed"
-    data-rss="https://medium.com/feed/retainable,
-https://medium.com/feed/vue-mastery"
-    data-maxcols="3"
-    data-layout="grid"
-    data-poststyle="inline"
-    data-readmore="Read the rest"
-    data-buttonclass="btn btn-primary"
-    data-offset="-100"
-  ></div>
+  <div class="blogs-content container">
+    <div id="medium-widget"></div>
+    <div class="explore-more">
+      <a target="_blank" href="https://sedsvit.medium.com/"><center><button>Explore More</button></center></a>
+    </div>
+  </div>
+  <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+  <script>
+    MediumWidget.Init({
+      renderTo: "#medium-widget",
+      params: {
+        resource: "https://medium.com/@sedsvit",
+        postsPerLine: 3,
+        limit: 3,
+        picture: "big",
+        fields: ["description", "publishAt"],
+        ratio: "square",
+      },
+    });
+  </script>
 </div>
