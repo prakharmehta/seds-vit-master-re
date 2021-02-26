@@ -1,13 +1,29 @@
+@font-face {
+  font-family: "AcherusGrotesque-ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("AcherusGrotesque-ExtraBold"),
+    url("../fonts/AcherusGrotesque-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Medium"),
+    url("../fonts/AcherusGrotesqueMedium.woff2") format("woff");
+}
+
 #blog {
   min-height: 100vh;
-  background: black;
+  background: white;
   box-sizing: border-box;
 }
 
 .blogs-heading {
   flex: 1;
   font-family: "Acherus Grotesque Regular";
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3.8vh;
@@ -23,8 +39,7 @@
   background-color: white !important;
   padding: 16px;
   box-sizing: border-box;
-  font-family: "Graphik Regular";
-  font-weight: bolder;
+  font-family: "Acherus Grotesque Regular";
 }
 
 .medium-widget-article__content * {
@@ -32,20 +47,48 @@
 }
 
 .medium-widget-article__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px !important;
+  font-family: "AcherusGrotesque-ExtraBold";
+}
+
+.medium-widget-article__title,
+.medium-widget-article__description {
   color: #120c6e !important;
+  text-align: center;
   /* color: #f8d3b5 !important; */
+}
+
+.medium-widget-article__description {
+  margin-top: 14px !important;
+  font-size: 18px !important;
+  font-family: "Acherus Grotesque Regular";
+  font-weight: 300!important;
+}
+
+.medium-widget-article__info {
+  display: flex;
+  font-size: 10px !important;
+  justify-content: center;
+}
+
+.medium-widget-article__image {
+  background: white;
 }
 
 .medium-widget-article__image img {
   margin-bottom: 0 !important;
 }
 
-.medium-widget-article__info {
-  justify-content: space-between;
+.medium-widget-article__date {
+  color: black!important;
+  font-weight: lighter!important;
 }
 
 .explore-more {
   margin-top: 20px;
+  margin-bottom: 64px;
 }
 
 .explore-more button {
@@ -64,6 +107,8 @@
   background-position: right bottom;
   transition: all 0.5s ease-out;
   outline: none;
+  box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
+
 }
 
 .explore-more button:hover {
@@ -72,10 +117,39 @@
   color: #3940d0;
   cursor: pointer;
 }
+.medium-widget-article__content, 
+.medium-widget-article__image img {
+  padding: 30px!important;
+  border-radius: 5px;
+  /* min-height: 225px!important; */
+}
 
-@media only screen and (orientation: portrait)
-{
+.medium-widget-article__content {
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-top: 0!important;
+  padding-bottom: 15px!important;
+  text-align: center;
+}
+
+a {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.medium-widget-article__column {
+  box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 5px!important;
+  /* height: 425px !important; */
+
+}
+
+@media only screen and (orientation: portrait) {
   .medium-widget-article__row {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 }
