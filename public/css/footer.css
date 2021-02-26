@@ -150,6 +150,10 @@
   width: 3.5vw;
 }
 
+.footer--mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .footer {
     height: 10vh;
@@ -173,5 +177,15 @@
 
   .footer__dev {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    display: none;
+  }
+
+  .footer--mobile {
+    display:block;
   }
 }

@@ -1,0 +1,32 @@
+.footer-copyright .container {
+  display: flex;
+}
+
+.footer__dev--mobile {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  /* identical to box height */
+  letter-spacing: 0.1em;
+  background-color: white;
+  color: #a5a5a5;
+  font-size: 1.5vw;
+}
+
+.footer--mobile .footer__follow__us__icons,
+.footer__dev--mobile {
+  flex: 1;
+}
+
+.footer--mobile__reach--us span {
+  font-family: "Acherus Grotesque Regular";
+  font-weight: 500!important;
+  font-size: 15px;
+  color: black;
+}
+
+.footer--mobile hr {
+  text-align: left!important;
+  margin-left: 0!important;
+}
