@@ -9,9 +9,7 @@
 
 .main {
   min-height: 100vh;
-
-  /* need a solid bg to hide the footer */
-  background: white;
+  background: black;
 
   /* put on top */
   position: relative;

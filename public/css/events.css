@@ -258,25 +258,26 @@
 
 .learn-more button {
   width: initial;
-  border: 1px solid white;
-  border-left: 5px solid #3940d0;
+  border: 1px solid #3940d0;
+  border-left: 5px solid white;
   padding: 10px;
   font-family: "Acherus Grotesque Regular";
-  background: white;
+  /* background: #3940d0; */
   font-size: 16px;
   /* color: #f8d3b5; */
-  color: #3940d0;
+  color: white;
   /* border-radius: 5px; */
-  background: linear-gradient(to right, #3940d0 50%, white 50%);
+  background: linear-gradient(to right, white 50%, #3940d0 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
   outline: none;
+  box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .learn-more button:hover {
   background-position: left bottom;
   border: 1px solid #3940d0;
-  color: white;
-  cursor: pointer;
+  color: #3940d0;
 }

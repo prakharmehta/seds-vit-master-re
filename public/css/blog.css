@@ -18,6 +18,8 @@
   min-height: 100vh;
   background: white;
   box-sizing: border-box;
+  padding-bottom: 64px;
+
 }
 
 .blogs-heading {
@@ -88,7 +90,6 @@
 
 .explore-more {
   margin-top: 20px;
-  margin-bottom: 64px;
 }
 
 .explore-more button {
@@ -108,7 +109,6 @@
   transition: all 0.5s ease-out;
   outline: none;
   box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
-
 }
 
 .explore-more button:hover {

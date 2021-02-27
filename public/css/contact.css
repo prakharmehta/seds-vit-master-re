@@ -154,3 +154,9 @@ textarea:focus {
   }
 
 }
+
+.contact__form__field input[type=text]:focus, .contact__form__field input[type=tel]:focus, .contact__form__field input[type=email]:focus {
+  border-bottom: 1px solid #3940d0!important;
+  box-shadow: 0 1px 0 0 #000;
+  outline: #3940d0;
+}
