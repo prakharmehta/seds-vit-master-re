@@ -104,8 +104,8 @@
   background-color: white;
   align-items: center;
   border: 1.5vw solid white;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
   border-bottom: 0px;
   align-items: center;
   justify-content: center;

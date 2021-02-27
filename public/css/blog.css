@@ -133,7 +133,7 @@
   text-align: center;
 }
 
-a {
+#blog a {
   box-sizing: border-box;
   border-radius: 5px;
   border-bottom-left-radius: 0;
