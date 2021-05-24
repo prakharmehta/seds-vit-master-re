@@ -24,6 +24,10 @@
     url("../fonts/GraphikRegular.woff2") format("woff");
 }
 
+* {
+  scroll-padding-top: 20px;
+}
+
 /* body */
 body {
   background-color: black;

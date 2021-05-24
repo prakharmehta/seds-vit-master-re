@@ -16,47 +16,38 @@ $(document).on('ready', function() {
     mobileFirst: true
   });
 
-  $('.events-carousel-image-gravitas').mouseover(function() {
-    $('.lazy-gravitas').slick('slickPause'),
-    $('.events-gravitas-learn').css('visibility', 'visible');
-    var dataId = $('.slick-current').attr("data-slick-index");
+  $('.events-gravitas').mouseover(function() {
+    $('.lazy-gravitas').slick('slickPause');
+    var dataId = $('.events-gravitas .slick-current').attr("data-slick-index");
     console.log(dataId);
     if(dataId == 0) {
-      $('.events-learn-button-gravitas').attr('onclick', "window.location.href='/starparty'")
+      $('.events-learn-button-gravitas .modal-trigger').attr('href', "#modal3")
     }
     else if(dataId == 1) {
-      $('.events-learn-button-gravitas').attr('onclick', "window.location.href='/apollo'")
+      $('.events-learn-button-gravitas .modal-trigger').attr('href', "#modal4")
     }
     else if(dataId == 2) {
-      $('.events-learn-button-gravitas').attr('onclick', "window.location.href='/odyssey'")
+      $('.events-learn-button-gravitas .modal-trigger').attr('href', "#modal5")
     }
   });
 
-  $('.events-carousel-image-gravitas').mouseout(function() {
-    $('.lazy-gravitas').slick('slickPlay'),
-    $('.events-gravitas-learn').css('visibility', 'hidden');
+  $('.events-gravitas').mouseout(function() {
+    $('.lazy-gravitas').slick('slickPlay');
   });
 
-  $('.events-carousel-image-flagship').mouseover(function() {
-    $('.lazy-flagship').slick('slickPause'),
-    $('.events-flagship-learn').css('visibility', 'visible');
-    var dataId = $('.slick-current').attr("data-slick-index");
+  $('.events-flagship').mouseover(function() {
+    $('.lazy-gravitas').slick('slickPause');
+    var dataId = $('.events-flagship .slick-current').attr("data-slick-index");
     console.log(dataId);
-    if(dataId == 0) {
-      $('.events-learn-button-flagship').attr('onclick', "window.location.href='/astra'")
+    if(dataId == 0 || dataId == 2) {
+      $('.events-learn-button-flagship .modal-trigger').attr('href', "#modal1")
     }
-    else if(dataId == 1) {
-      $('.events-learn-button-flagship').attr('onclick', "window.location.href='/antariksh'")
-    }
-    else if(dataId == 2) {
-      $('.events-learn-button-flagship').attr('onclick', "window.location.href='/astra'")
+    else if(dataId == 1 || dataId == 3) {
+      $('.events-learn-button-flagship .modal-trigger').attr('href', "#modal2")
     }
   });
 
-  $('.events-carousel-image-flagship').mouseout(function() {
-    $('.lazy-flagship').slick('slickPlay'),
-    $('.events-flagship-learn').css('visibility', 'hidden');
+  $('.events-flagship').mouseout(function() {
+    $('.lazy-gravitas').slick('slickPlay');
   });
-});
-
-
+})
