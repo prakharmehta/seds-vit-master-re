@@ -144,8 +144,25 @@
   flex: 4;
 }
 
-.footer__icon img {
-  width: 3.5vw;
+.footer__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__icon .fa {
+  font-size: 2.5vw;
+  transition: all 250ms ease-out;
+}
+
+.footer__follow__us__icons .footer__icon .fa:hover {
+  transform: scale(1.5);
+}
+
+.footer__icon a {
+  color: black;
 }
 
 .footer--mobile {
@@ -165,8 +182,8 @@
     margin-top: 7vh;
   }
 
-  .footer__icon img {
-    width: 5vw;
+  .footer__icon .fa {
+    font-size: 3vw;
   }
 
   .footer__logo {

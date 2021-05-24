@@ -252,10 +252,6 @@
   justify-content: center;
 }
 
-.learn-more {
-  margin-top: 20px;
-}
-
 .learn-more button {
   width: initial;
   border: 1px solid #3940d0;
@@ -280,4 +276,12 @@
   background-position: left bottom;
   border: 1px solid #3940d0;
   color: #3940d0;
+}
+
+.modal-content hr {
+  margin: 0;
+}
+
+.modal-content p {
+  text-align: justify;
 }
