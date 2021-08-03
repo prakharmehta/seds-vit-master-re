@@ -34,7 +34,7 @@
 }
 
 .slick-slide img {
-  width: 100%;
+  width: 80%;
 }
 
 .slick-prev:before,
@@ -151,6 +151,10 @@
     border-radius: 5px 5px 5px 5px;
     filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
   }
+
+  .slick-slide img {
+    width: 100%;
+  }
 }
 
 /* Mobile View: Content Container, Gravitas Carousel, Flagship Carousel & Learn More Buttons */
@@ -185,6 +189,10 @@
 
     border-radius: 5px 5px 5px 5px;
     filter: drop-shadow(6px 6px 9px rgba(0, 0, 0, 0.3));
+  }
+
+  .slick-slide img {
+    width: 100%;
   }
 }
 
