@@ -13,10 +13,6 @@ nav {
   z-index: 10;
 }
 
-nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0)!important;
-}
-
 form {
   height: auto !important;
 }
@@ -62,6 +58,7 @@ form {
 
 .nav-links a:hover {
   color: #ffbe85;
+  background-color: rgba(0, 0, 0, 0)!important;
 }
 
 .nav-links-conact-us {
