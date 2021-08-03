@@ -1,20 +1,24 @@
 nav {
   box-sizing: border-box;
-  display: flex!important;
+  display: flex !important;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #0b0742!important;
+  background-color: #0b0742 !important;
   position: sticky;
-  color: #f8d3b5!important;
+  color: #f8d3b5 !important;
   top: 0;
   font-size: 14px;
   text-transform: capitalize;
   z-index: 10;
 }
 
+nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0)!important;
+}
+
 form {
-  height: auto!important;
+  height: auto !important;
 }
 
 .nav-links {
@@ -48,7 +52,7 @@ form {
 }
 
 .nav-links li form input[type="submit"]:hover {
-    color: #FFBE85;
+  color: #ffbe85;
 }
 
 .nav-links a {
@@ -57,30 +61,30 @@ form {
 }
 
 .nav-links a:hover {
-    color: #FFBE85;
+  color: #ffbe85;
 }
 
 .nav-links-conact-us {
   display: block;
-  border: 1px solid #FFBE85;
+  border: 1px solid #ffbe85;
   border-radius: 2px;
   width: 100px !important;
   text-align: center;
   padding: 5px;
   transition: all 0.2s linear;
   line-height: normal;
-  font-size: 14px!important;
+  font-size: 14px !important;
 }
 
 nav * {
-  box-sizing: inherit!important;
+  box-sizing: inherit !important;
   -webkit-box-sizing: inherit;
 }
 
 .nav-links-conact-us:hover {
-    color: #0b0742!important;
-    background: #FFBE85;
-    transition: all 0.2s linear;
+  color: #0b0742 !important;
+  background: #ffbe85;
+  transition: all 0.2s linear;
 }
 
 .burger {
@@ -130,7 +134,7 @@ nav * {
   .nav-links li {
     opacity: 0;
   }
-  
+
   .nav-active {
     height: 92vh;
     transition: height 0.5s ease-in;
@@ -182,7 +186,7 @@ nav * {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #FFBE85;
+  background: #ffbe85;
   height: 2px;
   -webkit-transition-property: left right;
   transition-property: left right;
@@ -194,7 +198,7 @@ nav * {
 .underline-from-center:hover:before {
   left: 0;
   right: 0;
-  color: #FFBE85;
+  color: #ffbe85;
 }
 
 input:focus {
