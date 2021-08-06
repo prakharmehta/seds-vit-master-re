@@ -39,7 +39,7 @@
 
 .contact__form form {
   display: flex;
-  height: 50vh!important;
+  height: 50vh !important;
   width: 75%;
   flex-direction: column;
   /* align-items: center; */
@@ -112,19 +112,21 @@ textarea:focus {
   background: transparent;
   font-size: 16px;
   color: white;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .visible {
-    opacity: 1;
+  opacity: 1;
 }
 @media only screen and (max-width: 1024px) {
-    .contact__form__thankyou__msg {
-  font-size: 12px;
-    }
+  .contact__form__thankyou__msg {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,13 +152,14 @@ textarea:focus {
   }
 
   .contact__form__field {
-      flex-direction: column;
+    flex-direction: column;
   }
-
 }
 
-.contact__form__field input[type=text]:focus, .contact__form__field input[type=tel]:focus, .contact__form__field input[type=email]:focus {
-  border-bottom: 1px solid #3940d0!important;
+.contact__form__field input[type="text"]:focus,
+.contact__form__field input[type="tel"]:focus,
+.contact__form__field input[type="email"]:focus {
+  border-bottom: 1px solid #3940d0 !important;
   box-shadow: 0 1px 0 0 #000;
   outline: #3940d0;
 }
