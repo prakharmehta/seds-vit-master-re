@@ -15,7 +15,8 @@ app.get("/board", (req, res) => {
   res.render("board");
 });
 app.get("/live", (_, res) => {
-  res.redirect("https://meet.google.com/yze-kzaa-dyq");
+  if (Date.now() > 1637170200000) res.redirect("https://meet.google.com/jqs-pciq-sme");
+  else res.send("<h1>The meeting is not live yet</h1>");
 });
 
 app.listen(process.env.PORT || 3000);
