@@ -7,16 +7,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.render("index");
 });
 
-app.get("/board", (req, res) => {
+app.get("/board", (_, res) => {
   res.render("board");
 });
-app.get("/live", (_, res) => {
-  if (Date.now() > 1637170200000) res.redirect("https://meet.google.com/jqs-pciq-sme");
-  else res.send("<h1>The meeting is not live yet</h1>");
+app.get("/aphelion", (_, res) => {
+  res.send("<h1 style=`text-align: center`>The registrations are yet to open </h1>");
 });
 
 app.listen(process.env.PORT || 3000);
