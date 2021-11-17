@@ -15,7 +15,7 @@ app.get("/board", (req, res) => {
   res.render("board");
 });
 app.get("/live", (_, res) => {
-  res.redirect("https://teams.live.com/meet/95976355561650");
+  res.redirect("https://meet.google.com/yze-kzaa-dyq");
 });
 
 app.listen(process.env.PORT || 3000);
