@@ -19,7 +19,7 @@ app.get("/aphelion", (_, res) => {
 });
 app.get("/testd", (_, res) => {
   if (Date.now() > 1637650320000) res.download("./public/pdf/serve.pdf");
-  else res.send("Problem releases at 12:23am");
+  else res.send("Problem releases at " + Date.now() + " ||||| " + 1637650320000);
 });
 
 app.listen(process.env.PORT || 3000);
