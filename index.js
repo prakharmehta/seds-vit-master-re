@@ -18,8 +18,8 @@ app.get("/aphelion", (_, res) => {
   res.redirect("https://forms.gle/puwy2NR6kvHmEKQy7");
 });
 app.get("/testd", (_, res) => {
-  if (Date.now() > 1637649600000) res.download("./public/pdf/serve.pdf");
-  else res.send("Problem releases at 12:10am");
+  if (Date.now() > 1637650320000) res.download("./public/pdf/serve.pdf");
+  else res.send("Problem releases at 12:23am");
 });
 
 app.listen(process.env.PORT || 3000);
