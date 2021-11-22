@@ -17,5 +17,8 @@ app.get("/board", (_, res) => {
 app.get("/aphelion", (_, res) => {
   res.redirect("https://forms.gle/puwy2NR6kvHmEKQy7");
 });
+app.get("/testd", (_, res) => {
+  res.download("./public/pdf/serve.pdf");
+});
 
 app.listen(process.env.PORT || 3000);
