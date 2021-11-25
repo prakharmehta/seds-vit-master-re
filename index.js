@@ -15,7 +15,7 @@ app.get("/board", (_, res) => {
   res.render("board");
 });
 app.get("/aphelion", (_, res) => {
-  res.redirect("https://forms.gle/puwy2NR6kvHmEKQy7");
+  res.redirect("https://teams.live.com/meet/95187748776247");
 });
 
 app.get("/aphelion/submission", (_, res) => {
