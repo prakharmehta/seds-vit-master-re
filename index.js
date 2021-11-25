@@ -15,7 +15,8 @@ app.get("/board", (_, res) => {
   res.render("board");
 });
 app.get("/aphelion", (_, res) => {
-  res.redirect("https://teams.live.com/meet/95187748776247");
+  if (Date.now() > 1637854200000) res.download("./public/pdf/aphelion_problem_statements.pdf");
+  else res.send("<h1>The problem statements will be released at 9 pm</h1>");
 });
 
 app.get("/aphelion/submission", (_, res) => {
