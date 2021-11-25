@@ -16,11 +16,15 @@ app.get("/board", (_, res) => {
 });
 app.get("/aphelion", (_, res) => {
   if (Date.now() > 1637854200000) res.download("./public/pdf/aphelion_problem_statements.pdf");
-  else res.send("<h1>The problem statements will be released at 9 pm</h1>");
+  else res.send("<h1>The problem statements will be released at 9pm.</h1>");
 });
 
 app.get("/aphelion/submission", (_, res) => {
-  res.redirect("https://forms.gle/5BU6bjyDUPSdmzJr5");
+  if (Date.now() > 1637854200000) res.redirect("https://forms.gle/5BU6bjyDUPSdmzJr5");
+  else
+    res.send(
+      "<h1>The submission form will be live at 9pm tonight. Be sure to submit before 9pm tomorrow (26th November). </h1>"
+    );
 });
 
 // app.get("/testd", (_, res) => {
