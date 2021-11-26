@@ -16,7 +16,7 @@ app.get("/board", (_, res) => {
 });
 app.get("/aphelion", (_, res) => {
   // if (Date.now() > 1637854200000) res.download("./public/pdf/aphelion_problem_statements.pdf");
-  res.send("<h1>The Ideathon has ended.</h1>");
+  res.send("<h1>The Ideathon has ended, thank you for participating.</h1>");
 });
 
 app.get("/aphelion/submission", (_, res) => {
