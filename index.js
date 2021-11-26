@@ -20,7 +20,7 @@ app.get("/aphelion", (_, res) => {
 });
 
 app.get("/aphelion/submission", (_, res) => {
-  res.send("<h1>We are no longer accepting solutions, thank you for participation.</h1>");
+  res.send("<h1>We are no longer accepting solutions, thank you for participating.</h1>");
 });
 
 // app.get("/testd", (_, res) => {
