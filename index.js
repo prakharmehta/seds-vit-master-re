@@ -14,13 +14,6 @@ app.get("/", (_, res) => {
 app.get("/board", (_, res) => {
   res.render("board");
 });
-app.get("/aphelion", (_, res) => {
-  res.redirect("https://teams.live.com/meet/95187748776247");
-});
-
-app.get("/aphelion/submission", (_, res) => {
-  res.redirect("https://forms.gle/5BU6bjyDUPSdmzJr5");
-});
 
 // app.get("/testd", (_, res) => {
 //   if (Date.now() > 1637607900000) res.download("./public/pdf/serve.pdf");
