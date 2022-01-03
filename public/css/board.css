@@ -86,10 +86,14 @@ body {
   transform: rotate(90deg);
 }
 
-.row--white:last-child .dept__name--white {
+.dept__name--blue span.reverse__text {
+  transform: rotate(-90deg);
+}
+
+/* .row--white:last-child .dept__name--white {
   height: 33.219vw;
   margin-bottom: 1.26vw;
-}
+} */
 
 .board__members--mobile {
   display: none;
@@ -226,7 +230,7 @@ body {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
   }
-  
+
   .dept__name--white {
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;

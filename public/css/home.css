@@ -4,24 +4,21 @@
   font-family: "Acherus Grotesque Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Acherus Grotesque Regular"),
-    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+  src: local("Acherus Grotesque Regular"), url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Acherus Grotesque Regular Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Acherus Grotesque Regular Italic"),
-    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+  src: local("Acherus Grotesque Regular Italic"), url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Graphik Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Graphik Regular"),
-    url("../fonts/GraphikRegular.woff2") format("woff");
+  src: local("Graphik Regular"), url("../fonts/GraphikRegular.woff2") format("woff");
 }
 
 * {

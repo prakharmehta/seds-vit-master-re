@@ -1,55 +1,41 @@
 <div class="board__card__white" id="member<%= i %>">
-    <div class="board__card__white__designation">
-      <span><%= members[i].designation %></span>
+  <div class="board__card__white__designation">
+    <span><%= members[i].designation %></span>
+  </div>
+  <div class="board__card__white__profile">
+    <div class="board__card__white__profile__pic">
+      <img src="<%= members[i].prof_pic %>" alt="<%=members[i].name.split(` `)[0]%>'S PICTURE" />
     </div>
-    <div class="board__card__white__profile">
-      <div class="board__card__white__profile__pic">
-        <img src="<%= members[i].prof_pic %>" alt="" />
-      </div>
-      <div class="board__card__white__profile__info">
-        <div class="board__card__white__profile__info__name">
-          <span><%= members[i].name %></span>
-          <div class="board__card__white__profile__info__name__underline">
-            <div
-              class="board__card__white__profile__info__name__underline__hr"
-            ></div>
-            <div
-              class="board__card__white__profile__info__name__underline__dot"
-            ></div>
-            <div
-              class="board__card__white__profile__info__name__underline__hr"
-            ></div>
-          </div>
+    <div class="board__card__white__profile__info">
+      <div class="board__card__white__profile__info__name">
+        <span><%= members[i].name %></span>
+        <div class="board__card__white__profile__info__name__underline">
+          <div class="board__card__white__profile__info__name__underline__hr"></div>
+          <div class="board__card__white__profile__info__name__underline__dot"></div>
+          <div class="board__card__white__profile__info__name__underline__hr"></div>
         </div>
-        <div class="board__card__white__profile__info__quote">
-          <div class="board__card__white__profile__info__quote__comma comma--left">
-            "
-          </div>
-          <div class="board__card__white__profile__info__quote__text">
-            <!-- Life is simple. Our
+      </div>
+      <div class="board__card__white__profile__info__quote">
+        <div class="board__card__white__profile__info__quote__comma comma--left">"</div>
+        <div class="board__card__white__profile__info__quote__text">
+          <!-- Life is simple. Our
               <div style="transform: rotate(180deg);">PERSPECTIVE</div>
               isn't! -->
-            <div>
-              <%= members[i].quote %>
-            </div>
-          </div>
-          <div
-            class="board__card__white__profile__info__quote__comma comma--right"
-          >
-            "
-          </div>
+          <div><%= members[i].quote %></div>
         </div>
-        <div class="board__card__white__profile__info__social">
-          <div class="board__card__white__profile__info__social__link">
-              <a href="<%= members[i].social.insta %>"><i class="fa fa-instagram"></i></a>
-          </div>
-          <div class="board__card__white__profile__info__social__link">
-              <a href="<%= members[i].social.gmail %>"><i class="fa fa-envelope"></i></a>
-          </div>
-          <div class="board__card__white__profile__info__social__link">
-              <a href="<%= members[i].social.linkedin %>"><i class="fa fa-linkedin"></i></a>
-          </div>
+        <div class="board__card__white__profile__info__quote__comma comma--right">"</div>
+      </div>
+      <div class="board__card__white__profile__info__social">
+        <div class="board__card__white__profile__info__social__link">
+          <a href="<%= members[i].social.insta %>"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="board__card__white__profile__info__social__link">
+          <a href="<%= members[i].social.gmail %>"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="board__card__white__profile__info__social__link">
+          <a href="<%= members[i].social.linkedin %>"><i class="fa fa-linkedin"></i></a>
         </div>
       </div>
     </div>
   </div>
+</div>
