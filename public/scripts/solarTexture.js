@@ -6,7 +6,7 @@ const TEXTURES = [
   "moon_bright.jpg",
   "europa_bright.jpg",
   "pluto_bright.jpg",
-  "neptune_bright.jpg",
+  "neptune_bright.jpg", //  <- this is currently not used
 ];
 
 const texture_element = document.querySelector(".solar__texture > div");

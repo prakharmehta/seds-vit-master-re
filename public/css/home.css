@@ -92,7 +92,7 @@ body {
 
 .sub-heading span {
   margin-left: 1vw;
-  font-family: "Graphik";
+  font-family: "Graphik Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -108,7 +108,7 @@ body {
 }
 
 .quote span {
-  font-family: "Graphik";
+  font-family: "Graphik Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
@@ -180,7 +180,7 @@ body {
   width: 200%;
   height: 100%;
   animation: spin 90s linear alternate infinite;
-  background-image: url(../img/SolarTextures/mars_bright.jpg);
+  /* background-image: url(../img/SolarTextures/mars_bright.jpg); */
   background-size: cover;
   box-shadow: 20px 20px 100px 2px #000 inset;
   border: none;
