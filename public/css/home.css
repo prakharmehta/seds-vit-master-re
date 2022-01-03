@@ -145,8 +145,8 @@ body {
 }
 /* Social Media links end */
 
-/* Mars spinner */
-.mars {
+/* Solar Texture spinner */
+.solar__texture {
   background-image: radial-gradient(transparent, black);
   z-index: -2;
   width: 60vw;
@@ -163,7 +163,7 @@ body {
   transform: translateZ(0px) scale(1);
 }
 
-.mars:after {
+.solar__texture:after {
   position: absolute;
   content: "";
   top: 0;
@@ -176,11 +176,11 @@ body {
   border: none;
 }
 
-.mars > div {
+.solar__texture > div {
   width: 200%;
   height: 100%;
   animation: spin 90s linear alternate infinite;
-  background-image: url(../img/mars_bright.jpg);
+  background-image: url(../img/SolarTextures/mars_bright.jpg);
   background-size: cover;
   box-shadow: 20px 20px 100px 2px #000 inset;
   border: none;
@@ -190,7 +190,7 @@ body {
     transform: translate(-50%, -10%);
   }
 }
-/* Mars spinner end */
+/* solar texture spinner end */
 /* Home section end */
 
 .scrolldown {
@@ -304,7 +304,7 @@ body {
     width: 75%;
   }
 
-  .mars {
+  .solar__texture {
     background-image: radial-gradient(transparent, black);
     z-index: -1;
     width: 100vw;
@@ -331,7 +331,7 @@ body {
     transform: translate(-50%, -50%);
   }
 
-  .mars {
+  .solar__texture {
     background-image: radial-gradient(transparent, black);
     z-index: -1;
     width: 100vw;
