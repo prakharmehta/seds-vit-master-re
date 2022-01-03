@@ -52,6 +52,10 @@ form {
 }
 
 .nav-links a {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
   text-decoration: none;
   color: #f8d3b5;
 }
@@ -80,7 +84,7 @@ nav * {
 
 .nav-links-conact-us:hover {
   color: #0b0742 !important;
-  background: #ffbe85!important;
+  background: #ffbe85 !important;
   transition: all 0.2s linear;
 }
 
@@ -105,7 +109,7 @@ nav * {
 }
 
 /* Mobile menu */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 932px) {
   body {
     overflow-x: hidden;
   }

@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   width: 25.175vw;
-  height: 26.92vw;
+  height: 27.92vw;
   background: #120c6e;
   padding: 1.145vw 1.432vw;
 }
@@ -51,6 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 0px;
   height: auto;
 }
 
