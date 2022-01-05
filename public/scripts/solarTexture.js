@@ -1,13 +1,21 @@
 const TEXTURES = [
-  "mars_bright.jpg",
-  "venus_bright.jpg",
+  "titan_bright.jpg",
+  "mars_bright2.jpg",
+  "pluto_bright.jpg",
   "jupiter_bright.jpg",
-  "makemake_bright.jpg",
   "moon_bright.jpg",
   "europa_bright.jpg",
-  "pluto_bright.jpg",
-  "neptune_bright.jpg", //  <- this is currently not used
+  "venus_bright.jpg",
 ];
+
+// these are currently not used
+// [
+//   "earth_edit.jpg",
+//   "io_bright.jpg",
+//   "earth_night_bright.jpg",
+//   "makemake_bright.jpg",
+//   "neptune_bright.jpg",
+// ];
 
 const texture_element = document.querySelector(".solar__texture > div");
 
