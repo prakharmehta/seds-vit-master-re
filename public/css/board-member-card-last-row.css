@@ -20,13 +20,17 @@
   src: local("Graphik Regular"), url("../fonts/GraphikRegular.woff2") format("woff2");
 }
 
-.board__card__marketing {
+.board__card__lastrow {
   display: flex;
   flex-direction: column;
-  width: 25.175vw;
+  width: 24.575vw;
   height: 27.92vw;
   background: #120c6e;
   padding: 1.145vw 1.432vw;
+}
+
+.dept__last__row > div:nth-child(2) {
+  margin-left: 1.25vw;
 }
 
 .board__card__lastrow__designation {
@@ -162,12 +166,13 @@
 }
 
 @media screen and (max-width: 767px) {
-  .board__card__marketing {
+  .board__card__lastrow {
     display: flex;
     flex-direction: column;
     width: 34.9vw;
     height: 61.84vw;
     padding: 2.29vw 2.864vw;
+    /* margin: 0px; */
   }
 
   .board__card__lastrow__designation {
@@ -299,7 +304,7 @@
 }
 
 @media screen and (max-width: 540px) {
-  .board__card__marketing {
+  .board__card__lastrow {
     display: flex;
     flex-direction: column;
     width: 27.5vh;

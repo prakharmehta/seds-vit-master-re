@@ -40,11 +40,11 @@
         ('partials/board-member-card-blue.ejs', {members: members, i: i})%>
       </div>
       <% } %> <% } %>
-      <div class="dept__row row--white">
-        <div class="dept__name dept__name--blue"><span class="reverse__text"><%- members[i].dept %></span></div>
+      <div class="dept__row row--blue dept__last__row">
+        <div class="dept__name dept__name--blue"><span><%- members[i].dept %></span></div>
         <% for(i = 7; i < 9;) { %> <%- include ('partials/board-member-card-last-row.ejs', {members: members, i: i})%>
         <% i++; %> <% } %>
-        <div class="dept__name dept__name--blue"><span><%- members[--i].dept %></span></div>
+        <div class="dept__name dept__name--blue"><span class="reverse__text"><%- members[--i].dept %></span></div>
       </div>
     </div>
     <!-- Desktop Version Ends -->

@@ -11,6 +11,6 @@ const TEXTURES = [
 
 const texture_element = document.querySelector(".solar__texture > div");
 
-const index = new Date().getDate();
+const index = new Date().getDay();
 
 texture_element.style.backgroundImage = `url(../img/SolarTextures/${TEXTURES[index]})`;

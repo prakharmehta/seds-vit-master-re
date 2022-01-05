@@ -119,6 +119,7 @@ nav * {
     margin-right: 10vw;
   }
   .nav-links {
+    padding: 0px;
     position: absolute;
     right: 0px;
     height: 0vh;
