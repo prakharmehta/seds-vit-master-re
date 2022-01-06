@@ -16,5 +16,4 @@ app.get("/board", (_, res) => {
   res.render("board", { members });
 });
 
-
 app.listen(process.env.PORT || 3000);
