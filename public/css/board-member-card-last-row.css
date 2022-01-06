@@ -1,0 +1,441 @@
+/* Web fonts */
+@font-face {
+  font-family: "Acherus Grotesque Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular"), url("../fonts/AcherusGrotesqueRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Acherus Grotesque Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acherus Grotesque Regular Italic"), url("../fonts/AcherusGrotesqueRegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Regular"), url("../fonts/GraphikRegular.woff2") format("woff2");
+}
+
+.board__card__lastrow {
+  display: flex;
+  flex-direction: column;
+  width: 24.575vw;
+  height: 27.92vw;
+  background: #120c6e;
+  padding: 1.145vw 1.432vw;
+}
+
+.dept__last__row > div:nth-child(2) {
+  margin-left: 1.25vw;
+}
+
+.board__card__lastrow__designation {
+  color: #ffffff;
+  font-family: "Acherus Grotesque Regular", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  font-size: 1.7182vw;
+  text-align: center;
+}
+
+.board__card__lastrow__profile {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 0px;
+  height: 100%;
+}
+
+.board__card__lastrow__profile__pic {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px;
+  height: auto;
+}
+
+.board__card__lastrow__profile__pic img {
+  width: 12.88vw;
+  height: 12.88vw;
+}
+
+.board__card__lastrow__profile__info {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.board__card__lastrow__profile__info__name {
+  font-family: "Acherus Grotesque Regular", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.317vw;
+  line-height: 125%;
+  color: #ffffff;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board__card__lastrow__profile__info__name__underline {
+  margin-top: 0.5727vw;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+  width: 13.173vw;
+}
+
+.board__card__lastrow__profile__info__name__underline__hr {
+  width: 5.727vw;
+  height: 0.1145vw;
+  /* border: 2px solid #FFBE85; */
+  background: #ffbe85;
+}
+
+.board__card__lastrow__profile__info__name__underline__dot {
+  width: 0.2864vw;
+  height: 0.2864vw;
+  background: #ffbe85;
+  border-radius: 0.5727vw;
+}
+
+.board__card__lastrow__profile__info__quote {
+  position: relative;
+  height: 7.16vw;
+  width: 20.74vw;
+  display: flex;
+  justify-content: center;
+}
+
+.board__card__lastrow__profile__info__quote__comma {
+  width: 1.1455vw;
+  height: 1.7182vw;
+  font-family: "Grenze", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.86vw;
+  line-height: 39.5%;
+  letter-spacing: 0.01em;
+  color: #ffbe85;
+}
+
+.comma--left {
+  position: absolute;
+  top: 0.573vw !important;
+  left: 0;
+}
+
+.board__card__lastrow__profile__info__quote__text {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.86vw;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comma--right {
+  position: absolute;
+  bottom: -1.146vw !important;
+  right: 0;
+}
+
+.board__card__lastrow__profile__info__social {
+  display: flex;
+  width: 11.74vw;
+  justify-content: space-evenly;
+}
+
+.board__card__lastrow__profile__info__social .fa {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .board__card__lastrow {
+    display: flex;
+    flex-direction: column;
+    width: 34.9vw;
+    height: 61.84vw;
+    padding: 2.29vw 2.864vw;
+    /* margin: 0px; */
+  }
+
+  .board__card__lastrow__designation {
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .board__card__lastrow__designation span {
+    letter-spacing: 0.4em;
+    font-weight: bold;
+    font-size: 3.4364vw !important;
+  }
+
+  .board__card__lastrow__profile {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+  }
+
+  .board__card__lastrow__profile__pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .board__card__lastrow__profile__pic img {
+    width: 25.76vw;
+    height: 25.76vw;
+  }
+
+  .board__card__lastrow__profile__info {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .board__card__lastrow__profile__info__name {
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.634vw;
+    line-height: 125%;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board__card__lastrow__profile__info__name__underline {
+    margin-top: 1.1454vw;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    width: 26.346vw;
+  }
+
+  .board__card__lastrow__profile__info__name__underline__hr {
+    width: 11.454vw;
+    height: 0.229vw;
+  }
+
+  .board__card__lastrow__profile__info__name__underline__dot {
+    width: 0.5728vw;
+    height: 0.5728vw;
+    border-radius: 1.1454vw;
+  }
+
+  .board__card__lastrow__profile__info__quote {
+    position: relative;
+    height: 14.32vw;
+    width: 23.48vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .board__card__lastrow__profile__info__quote__comma {
+    width: 2.291vw;
+    height: 3.4364vw;
+    font-family: "Grenze", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.72vw;
+    line-height: 39.5%;
+    letter-spacing: 0.01em;
+  }
+
+  .comma--left {
+    position: absolute;
+    top: 1.146vw !important;
+    left: 0;
+  }
+
+  .board__card__lastrow__profile__info__quote__text {
+    font-family: "Graphik Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.72vw;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comma--right {
+    position: absolute;
+    bottom: -1.146vw !important;
+    right: 0;
+  }
+
+  .board__card__lastrow__profile__info__social {
+    display: flex;
+    width: 23.48vw;
+    justify-content: space-evenly;
+  }
+
+  .fa {
+    font-size: 1.6vw !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .board__card__lastrow {
+    display: flex;
+    flex-direction: column;
+    width: 27.5vh;
+    height: 61.84vh;
+    padding: 2.29vh 2.864vh;
+  }
+
+  .board__card__lastrow__designation {
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .board__card__lastrow__designation span {
+    letter-spacing: 0.4em;
+    font-weight: bold;
+    font-size: 3.4364vh !important;
+  }
+
+  .board__card__lastrow__profile {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+  }
+
+  .board__card__lastrow__profile__pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .board__card__lastrow__profile__pic img {
+    width: 25.76vh;
+    height: 25.76vh;
+  }
+
+  .board__card__lastrow__profile__info {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .board__card__lastrow__profile__info__name {
+    font-family: "Acherus Grotesque Regular", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5vh;
+    line-height: 125%;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .board__card__lastrow__profile__info__name__underline {
+    margin-top: 1.1454vh;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    width: 26.346vh;
+  }
+
+  .board__card__lastrow__profile__info__name__underline__hr {
+    width: 11.454vh;
+    height: 0.229vh;
+  }
+
+  .board__card__lastrow__profile__info__name__underline__dot {
+    width: 0.5728vh;
+    height: 0.5728vh;
+    border-radius: 1.1454vh;
+  }
+
+  .board__card__lastrow__profile__info__quote {
+    position: relative;
+    height: 14.32vh;
+    width: 23.48vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .board__card__lastrow__profile__info__quote__comma {
+    width: 2.291vh;
+    height: 3.4364vh;
+    font-family: "Grenze", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.72vh;
+    line-height: 39.5%;
+    letter-spacing: 0.01em;
+  }
+
+  .comma--left {
+    position: absolute;
+    top: 1.146vh !important;
+    left: 0;
+  }
+
+  .board__card__lastrow__profile__info__quote__text {
+    font-family: "Graphik Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.72vh;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comma--right {
+    position: absolute;
+    bottom: -1.146vh !important;
+    right: 0;
+  }
+
+  .board__card__lastrow__profile__info__social {
+    display: flex;
+    width: 23.48vh;
+    justify-content: space-evenly;
+  }
+
+  .board__card__lastrow__profile__info__social .fa {
+    font-size: 1.6vh !important;
+  }
+}

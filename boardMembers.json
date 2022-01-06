@@ -1,0 +1,119 @@
+[
+    {
+      "color": "blue",
+      "dept": "",
+      "prof_pic": "img/Board2022/Kartika.png",
+      "designation": "CHAIR",
+      "name": "KARTIKA GIRISH NAIR",
+      "quote": "Nothing is a waste of time if you use the experience wisely.",
+      "social": {
+        "insta": "https://www.instagram.com/karts185/",
+        "gmail": "mailto: kartikagnair.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/kartika-girish-nair-a63927217/"
+      }
+    },
+    {
+      "color": "white",
+      "dept": "EVENTS AND<br>RESEARCH",
+      "prof_pic": "img/Board2022/Pooja.png",
+      "designation": "DIRECTOR",
+      "name": "POOJA THAKUR",
+      "quote": "Arise, awake, stop not till the goal is reached.",
+      "social": {
+        "insta": "https://www.instagram.com/_nancytagore/",
+        "gmail": "mailto: pooja.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/pooja-thakur-38519a211/"
+      }
+    },
+    {
+      "color": "white",
+      "dept": "EVENTS AND<br>RESEARCH",
+      "prof_pic": "img/Board2022/Surya.png",
+      "designation": "MANAGER",
+      "name": "SURYA MUDALIAR",
+      "quote": "Enjoy life today, because yesterday is gone, and tomorrow is never promised.",
+      "social": {
+        "insta": "https://www.instagram.com/surya.s_06.12/",
+        "gmail": "mailto: surya.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/surya-mudaliar-a390841a7/"
+      }
+    },
+    {
+      "color": "blue",
+      "dept": "OUTREACH",
+      "prof_pic": "img/Board2022/Atul.png",
+      "designation": "DIRECTOR",
+      "name": "ATUL KARN",
+      "quote": "To lose patience is to lose the battle.",
+      "social": {
+        "insta": "https://www.instagram.com/atul_karn/",
+        "gmail": "mailto: atulkarn.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/atulkumarkarn/"
+      }
+    },
+    {
+      "color": "blue",
+      "dept": "OUTREACH",
+      "prof_pic": "img/Board2022/Shiv.png",
+      "designation": "MANAGER",
+      "name": "SHIV SAI INDRAKANTI",
+      "quote": "We are here to awaken from our illusion of separateness.",
+      "social": {
+        "insta": "https://www.instagram.com/shiv.indrakanti/",
+        "gmail": "mailto: shivsai.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/shiv-indrakanti-aa68981a5/"
+      }
+    },
+    {
+      "color": "white",
+      "dept": "MARKETING",
+      "prof_pic": "img/Board2022/Gayathri.png",
+      "designation": "DIRECTOR",
+      "name": "GAYATHRI U",
+      "quote": "For some people, small, beautiful events are what life is all about.",
+      "social": {
+        "insta": "https://www.instagram.com/_gaixa_/",
+        "gmail": "mailto: gayathriu.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/gayathri-udayaprakash-12b0461b9/"
+      }
+    },
+    {
+      "color": "white",
+      "dept": "MARKETING",
+      "prof_pic": "img/Board2022/Tushar.png",
+      "designation": "MANAGER",
+      "name": "TUSHAR S AGRAWAL",
+      "quote": "The fact that you aren't there, should be enough inspiration.",
+      "social": {
+        "insta": "https://www.instagram.com/tushar_yaar/",
+        "gmail": "mailto: tusharsagrawal.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/tushar-s-agrawal-215ba81a0/"
+      }
+    },
+    {
+      "color": "blue",
+      "dept": "FINANCE AND <br/>DOCUMENTATION",
+      "prof_pic": "img/Board2022/Neelesh.png",
+      "designation": "DIRECTOR",
+      "name": "NEELESH PANDEY",
+      "quote": "One moment can change a day. One day can change a life. One life can change the world.",
+      "social": {
+        "insta": "https://www.instagram.com/pandey_.62/",
+        "gmail": "mailto: neelesh.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/neelesh-pandey-6a1361191/"
+      }
+    },
+    {
+      "color": "blue",
+      "dept": "HUMAN <br/>RESOURCES",
+      "prof_pic": "img/Board2022/Rashi.png",
+      "designation": "DIRECTOR",
+      "name": "RASHI MARU",
+      "quote": "Be curious to explore to discover the unknown...",
+      "social": {
+        "insta": "https://www.instagram.com/r_a_s_h_i_3568/",
+        "gmail": "mailto: rashimaru.sedsvit@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/rashi-maru-40535619b/"
+      }
+    }
+    ]

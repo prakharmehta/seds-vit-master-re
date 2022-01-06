@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 var path = require("path");
+const members = require("./boardMembers.json");
 require("ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -12,19 +13,8 @@ app.get("/", (_, res) => {
 });
 
 app.get("/board", (_, res) => {
-  res.render("board");
-});
-app.get("/aphelion", (_, res) => {
-  res.redirect("https://teams.live.com/meet/95187748776247");
+  res.render("board", { members });
 });
 
-app.get("/aphelion/submission", (_, res) => {
-  res.redirect("https://forms.gle/5BU6bjyDUPSdmzJr5");
-});
-
-// app.get("/testd", (_, res) => {
-//   if (Date.now() > 1637607900000) res.download("./public/pdf/serve.pdf");
-//   else res.send("Problem releases at " + Date.now() + " ||||| " + 1637607900000);
-// });
 
 app.listen(process.env.PORT || 3000);

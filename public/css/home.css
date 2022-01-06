@@ -4,24 +4,21 @@
   font-family: "Acherus Grotesque Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Acherus Grotesque Regular"),
-    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+  src: local("Acherus Grotesque Regular"), url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Acherus Grotesque Regular Italic";
   font-style: normal;
   font-weight: normal;
-  src: local("Acherus Grotesque Regular Italic"),
-    url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
+  src: local("Acherus Grotesque Regular Italic"), url("../fonts/AcherusGrotesqueRegular.woff2") format("woff");
 }
 
 @font-face {
   font-family: "Graphik Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("Graphik Regular"),
-    url("../fonts/GraphikRegular.woff2") format("woff");
+  src: local("Graphik Regular"), url("../fonts/GraphikRegular.woff2") format("woff");
 }
 
 * {
@@ -95,7 +92,7 @@ body {
 
 .sub-heading span {
   margin-left: 1vw;
-  font-family: "Graphik";
+  font-family: "Graphik Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -111,7 +108,7 @@ body {
 }
 
 .quote span {
-  font-family: "Graphik";
+  font-family: "Graphik Regular";
   font-style: normal;
   font-weight: 300;
   font-size: 30px;
@@ -148,8 +145,8 @@ body {
 }
 /* Social Media links end */
 
-/* Mars spinner */
-.mars {
+/* Solar Texture spinner */
+.solar__texture {
   background-image: radial-gradient(transparent, black);
   z-index: -2;
   width: 60vw;
@@ -166,7 +163,7 @@ body {
   transform: translateZ(0px) scale(1);
 }
 
-.mars:after {
+.solar__texture:after {
   position: absolute;
   content: "";
   top: 0;
@@ -174,16 +171,16 @@ body {
   left: 0;
   right: 0;
   box-shadow: -20px -20px 100px 2px #000 inset;
-  background-image: radial-gradient(transparent, black);
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8));
   border-radius: 50%;
   border: none;
 }
 
-.mars > div {
+.solar__texture > div {
   width: 200%;
   height: 100%;
   animation: spin 90s linear alternate infinite;
-  background-image: url(../img/mars_bright.jpg);
+  /* background-image: url(../img/SolarTextures/mars_bright.jpg); */
   background-size: cover;
   box-shadow: 20px 20px 100px 2px #000 inset;
   border: none;
@@ -193,7 +190,7 @@ body {
     transform: translate(-50%, -10%);
   }
 }
-/* Mars spinner end */
+/* solar texture spinner end */
 /* Home section end */
 
 .scrolldown {
@@ -307,7 +304,7 @@ body {
     width: 75%;
   }
 
-  .mars {
+  .solar__texture {
     background-image: radial-gradient(transparent, black);
     z-index: -1;
     width: 100vw;
@@ -334,7 +331,7 @@ body {
     transform: translate(-50%, -50%);
   }
 
-  .mars {
+  .solar__texture {
     background-image: radial-gradient(transparent, black);
     z-index: -1;
     width: 100vw;
