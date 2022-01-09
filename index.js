@@ -34,10 +34,25 @@ app.get("/*", async (_, res) => {
   const query = `*[_type == "event" && eventEndDate.utc > $today]`;
   const today = new Date("2022-01-12").toISOString();
   const event = await client.fetch(query, { today });
-  console.log(event);
-  const { title, eventDate, poster, path, eventDescription = "", tagLine = "" } = event[0];
-  posterUrl = imageBuilder.image(poster).url();
-  res.render("event", {
+
+  if (event.length == 0) {
+    res.redirect("/");
+  }
+
+  const { title, eventDate, poster, path, eventMeetingLink, eventDescription = "", tagLine = "" } = event[0];
+
+  const currentDate = new Date();
+  const eventDateObj = new Date(eventDate.utc);
+
+  // redirect to meeting link if time left is less that 1 sec
+  if (eventDateObj - currentDate <= 1000 && eventMeetingLink) {
+    return res.redirect(eventMeetingLink);
+  } else if (eventDateObj - currentDate <= 0 && !eventMeetingLink) {
+    return res.redirect("/");
+  }
+
+  const posterUrl = imageBuilder.image(poster).url();
+  return res.render("event", {
     eventDate: eventDate.utc,
     title,
     eventDescription,
