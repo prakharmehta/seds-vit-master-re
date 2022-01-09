@@ -20,6 +20,7 @@
   "homepage": "https://github.com/prakharmehta/seds-vit-master-re#readme",
   "dependencies": {
     "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
     "ejs": "^3.1.5",
     "ejs-lint": "^1.1.0",
     "express": "^4.17.1",

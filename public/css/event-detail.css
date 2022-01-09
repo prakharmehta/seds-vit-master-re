@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Graphik Regular"), url("../fonts/GraphikLight.woff2") format("woff");
+}
+
+.event__details__container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 100;
+  padding: 70px;
+  font-family: "Graphik Regular";
+}
+
+#event__poster {
+  width: 33vw;
+  height: auto;
+  box-shadow: 25px 15px #a5a5a5;
+  -moz-box-shadow: 25px 15px #a5a5a5;
+  -webkit-box-shadow: 25px 15px #a5a5a5;
+  -khtml-box-shadow: 25px 15px #a5a5a5;
+}
+
+.event__poster__mobile__container {
+  display: none;
+}
+
+.event__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 70px;
+}
+.event__title__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#event__title {
+  font-size: 96px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0px;
+}
+#event__tagline {
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+#event__description {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-align: justify;
+  color: #000;
+  margin: 0px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1300px) {
+  .event__details__container {
+    padding: 60px;
+  }
+  .event__details {
+    margin-left: 60px;
+  }
+
+  #event__title {
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+  #event__tagline {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1096px) {
+  .event__details__container {
+    padding: 40px;
+  }
+  .event__details {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .event__poster__container {
+    display: none;
+  }
+  .event__poster__mobile__container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+  #event__poster {
+    width: 80%;
+  }
+  .event__details {
+    margin-left: 0px;
+  }
+}

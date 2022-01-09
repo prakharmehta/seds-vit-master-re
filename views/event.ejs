@@ -3,15 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/countdown.css" />
-    <!-- <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/whatwedo.css" /> -->
+    <link rel="stylesheet" href="css/event-detail.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <!-- <link rel="stylesheet" href="css/contact.css" />-->
-    <!-- <link rel="stylesheet" href="css/events.css" />
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/slick-theme.css" />
-    <link rel="stylesheet" href="css/blog.css" /> -->
+
     <link
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
@@ -41,7 +35,7 @@
   <body>
     <div class="main">
       <%- include ("partials/countdown.ejs",{eventDate}) %> <%- include ('partials/navbar.ejs') %> <%- include
-      ('partials/live-event-details.ejs') %>
+      ('partials/live-event-details.ejs',{ title, eventDescription, tagLine, posterUrl}) %>
     </div>
     <script>
       particlesJS.load("particles__container", "scripts/particle_config.json");

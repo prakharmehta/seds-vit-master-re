@@ -109,15 +109,6 @@
   margin: 0px;
 }
 
-.event__details__container {
-  background-color: #fff;
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-  z-index: 100;
-  padding: 70px;
-}
-
 @media (max-width: 1300px) {
   #countdown {
     padding: 60px;
