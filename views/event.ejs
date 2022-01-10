@@ -34,9 +34,9 @@
   </head>
   <body>
     <div class="main">
-      <% if (eventCountdownVisible) { %> <%- include ("partials/countdown.ejs",{eventDate}) %> <% } %> <%- include
-      ('partials/navbar.ejs') %> <%- include ('partials/event-details.ejs',{ title, eventDescription, tagLine,
-      posterUrl}) %>
+      <% if (eventCountdownVisible) { %> <%- include ("partials/countdown.ejs",{eventDate,eventMeetingLink}) %> <% } %>
+      <%- include ('partials/navbar.ejs') %> <%- include ('partials/event-details.ejs',{ title, eventDescription,
+      tagLine, posterUrl}) %>
     </div>
 
     <% if (eventCountdownVisible) { %>

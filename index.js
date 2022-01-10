@@ -15,8 +15,8 @@ const client = sanityClient({
   projectId: "wvxxjfa8",
   dataset: "production",
   apiVersion: "2022-01-09", // use current UTC date - see "specifying API version"!
-  token: sanityConfig.token, // or leave blank for unauthenticated usage
-  useCdn: false, // `false` if you want to ensure fresh data
+  // token: sanityConfig.token, // or leave blank for unauthenticated usage
+  useCdn: true, // `false` if you want to ensure fresh data
 });
 
 const imageBuilder = imageUrlBuilder(client);
@@ -68,19 +68,20 @@ app.get("/:id", async (req, res) => {
     return res.redirect("/");
   }
 
-  // tempDate = new Date(currentDate.getTime() + 15000);
+  tempDate = new Date(currentDate.getTime() + 25000);
   // console.log("Countdown ", eventCountdownVisible);
   // console.log("date", eventEndDateValue >= currentDate);
   // console.log("Visible" + (eventCountdownVisible && eventEndDateValue >= currentDate ? true : false));
   const posterUrl = imageBuilder.image(poster).url();
   return res.render("event", {
-    eventDate: eventDate.utc,
-    // eventDate: tempDate.toUTCString(),
+    // eventDate: eventDate.utc,
+    eventDate: tempDate.toUTCString(),
     title,
     eventDescription,
     eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate,
     tagLine,
     posterUrl,
+    eventMeetingLink,
     path,
   });
 });
