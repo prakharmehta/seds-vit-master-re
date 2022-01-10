@@ -30,32 +30,55 @@ app.get("/board", (_, res) => {
   res.render("board", { members });
 });
 
-app.get("/*", async (_, res) => {
-  const query = `*[_type == "event" && eventEndDate.utc > $today]`;
-  const today = new Date("2022-01-12").toISOString();
-  const event = await client.fetch(query, { today });
+app.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  let query = `*[_type == "event" && path.current=="${id}"]`;
 
-  if (event.length == 0) {
-    res.redirect("/");
+  if (id === "live") {
+    const today = new Date().toISOString();
+    query = `*[_type == "event" && eventEndDate.utc > "${today}"]`;
   }
 
-  const { title, eventDate, poster, path, eventMeetingLink, eventDescription = "", tagLine = "" } = event[0];
+  const event = await client.fetch(query);
 
-  const currentDate = new Date();
-  const eventDateObj = new Date(eventDate.utc);
-
-  // redirect to meeting link if time left is less that 1 sec
-  if (eventDateObj - currentDate <= 1000 && eventMeetingLink) {
-    return res.redirect(eventMeetingLink);
-  } else if (eventDateObj - currentDate <= 0 && !eventMeetingLink) {
+  if (event.length === 0) {
     return res.redirect("/");
   }
 
+  const {
+    title,
+    eventDate,
+    eventEndDate,
+    poster,
+    path,
+    eventMeetingLink,
+    eventCountdownVisible = false,
+    eventDescription = "",
+    tagLine = "",
+  } = event[0];
+
+  const currentDate = new Date();
+  const eventDatevalue = new Date(eventDate.utc);
+  const eventEndDateValue = new Date(eventEndDate.utc);
+
+  // redirect to meeting link if time left is less that 3 sec
+  if (eventDatevalue - currentDate <= 3000 && eventMeetingLink && currentDate < eventEndDateValue) {
+    return res.redirect(eventMeetingLink);
+  } else if (eventDatevalue - currentDate <= 1000 && !eventMeetingLink) {
+    return res.redirect("/");
+  }
+
+  // tempDate = new Date(currentDate.getTime() + 15000);
+  // console.log("Countdown ", eventCountdownVisible);
+  // console.log("date", eventEndDateValue >= currentDate);
+  // console.log("Visible" + (eventCountdownVisible && eventEndDateValue >= currentDate ? true : false));
   const posterUrl = imageBuilder.image(poster).url();
   return res.render("event", {
     eventDate: eventDate.utc,
+    // eventDate: tempDate.toUTCString(),
     title,
     eventDescription,
+    eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate,
     tagLine,
     posterUrl,
     path,

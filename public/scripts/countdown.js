@@ -9,14 +9,19 @@ const hourElement = $("#hours");
 const dayElement = $("#days");
 
 const countdownContainer = $("#countdown");
+const countdownClock = $(".countdown__clock");
 let countdown_visible = false;
+
+const wordCountdown = ["TEN", "NINE", "EIGHT", "SEVEN", "SIX", "FIVE", "FOUR", "THREE", "TWO", "ONE", "LAUNCHING"];
+
 $(document).on("ready", function () {
   const eventDate = new Date($("#date__value").text());
   const currentDate = new Date();
   let diff = eventDate - currentDate;
   let countdownInterval = setInterval(function () {
-    if (diff < 0) {
+    if (diff < 1000) {
       clearInterval(countdownInterval);
+      // startWorkCountdown();
     }
     updateCountdown(diff);
     diff -= 1000;
@@ -41,3 +46,14 @@ function updateCountdown(diff) {
       300
     );
 }
+
+// function startWorkCountdown() {
+//   countdownClock
+//     .animate(
+//       {
+//         opacity: 0,
+//       },
+//       300
+//     )
+//     .html(wordCountdown[0]);
+// }

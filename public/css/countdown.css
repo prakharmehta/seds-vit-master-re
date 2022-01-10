@@ -150,10 +150,28 @@
 }
 
 @media (max-width: 768px) {
+  .countdown__container {
+    justify-content: flex-start;
+  }
+  #countdown {
+    justify-content: flex-start;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .countdown__tag {
+    text-align: center;
+  }
   .countdown__clock {
     flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .countdown__clock .countdown__item:nth-child(2n) {
     margin: 0px 0px;
+  }
+  .countdown__value {
+    font-size: 60px;
+    letter-spacing: 6px;
   }
 }

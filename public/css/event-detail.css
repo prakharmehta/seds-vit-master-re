@@ -16,7 +16,7 @@
   font-family: "Graphik Regular";
 }
 
-#event__poster {
+.event__poster {
   width: 33vw;
   height: auto;
   box-shadow: 25px 15px #a5a5a5;
@@ -60,7 +60,7 @@
   margin: 0px;
   margin-bottom: 20px;
 }
-#event__description {
+.event__description {
   font-size: 20px;
   letter-spacing: 2px;
   text-align: center;
@@ -105,7 +105,7 @@
     justify-content: center;
     margin: 20px 0px;
   }
-  #event__poster {
+  .event__poster {
     width: 80%;
   }
   .event__details {
