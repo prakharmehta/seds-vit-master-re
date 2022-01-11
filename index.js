@@ -68,14 +68,11 @@ app.get("/:id", async (req, res) => {
     return res.redirect("/");
   }
 
-  tempDate = new Date(currentDate.getTime() + 25000);
-  // console.log("Countdown ", eventCountdownVisible);
-  // console.log("date", eventEndDateValue >= currentDate);
-  // console.log("Visible" + (eventCountdownVisible && eventEndDateValue >= currentDate ? true : false));
+  tempDate = new Date(currentDate.getTime() + 22000);
   const posterUrl = imageBuilder.image(poster).url();
   return res.render("event", {
-    // eventDate: eventDate.utc,
-    eventDate: tempDate.toUTCString(),
+    eventDate: eventDate.utc,
+    // eventDate: tempDate.toUTCString(),
     title,
     eventDescription,
     eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate,

@@ -114,13 +114,18 @@
 }
 #word__countdown {
   font-family: "Acherus Grotesque";
-  font-size: 96px;
+  font-size: 50px;
   color: white;
   letter-spacing: 10px;
   margin: 0px;
   display: flex;
+  text-transform: uppercase;
+  text-align: center;
   align-items: center;
   min-height: 150px;
+}
+#word__countdown.small {
+  font-size: 50px;
 }
 #word__countdown > .light {
   opacity: 0.5;
@@ -141,7 +146,7 @@
     letter-spacing: 10px;
   }
   #word__countdown {
-    font-size: 80px;
+    font-size: 50px;
     min-height: 140px;
   }
   .countdown__label {
@@ -165,7 +170,7 @@
     letter-spacing: 6px;
   }
   #word__countdown {
-    font-size: 72px;
+    font-size: 50px;
     min-height: 140px;
   }
   .countdown__label {
@@ -200,7 +205,7 @@
     letter-spacing: 6px;
   }
   #word__countdown {
-    font-size: 60px;
+    font-size: 50px;
     min-height: 120px;
     letter-spacing: 8px;
   }

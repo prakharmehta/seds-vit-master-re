@@ -12,7 +12,27 @@ const countdownContainer = $("#countdown");
 const countdownClock = $(".countdown__clock");
 let countdown_visible = false;
 
-const wordCountdown = ["NINE", "EIGHT", "SEVEN", "SIX", "FIVE", "FOUR", "THREE", "TWO", "ONE", "LAUNCHING.."];
+const wordCountdown = [
+  "Eighteen",
+  "Seventeen",
+  "Apollo 11, This is",
+  "launch operations manager",
+  "The Launch team wishes you ",
+  "good luck and godspeed",
+  "Twelve",
+  "Eleven",
+  "Ten",
+  "Ignition sequence start",
+  "Eight",
+  "Seven",
+  "Six",
+  "Five",
+  "Four",
+  "All engines running",
+  "Two",
+  "One",
+  "Liftoff",
+];
 let wordCounter = 0;
 let fx;
 
@@ -29,7 +49,9 @@ $(document).on("ready", function () {
   const currentDate = new Date();
   let diff = eventDate - currentDate;
   let countdownInterval = setInterval(function () {
-    if (diff < 12000) {
+    if (diff < 20000) {
+      wordCounter = 19 - Math.floor(diff / 1000);
+      console.log(wordCounter);
       clearInterval(countdownInterval);
       startWorkCountdown();
     }
@@ -64,7 +86,7 @@ function startWorkCountdown() {
     },
     500,
     () => {
-      countdownClock.html("<span id='word__countdown'>TEN</span>");
+      countdownClock.html(`<span id='word__countdown'>Preparing</span>`);
       const el = document.getElementById("word__countdown");
       countdownClock.animate(
         {
@@ -83,12 +105,14 @@ function startWorkCountdown() {
 class TextScramble {
   constructor(el) {
     this.el = el;
-    this.chars = "!<>-_\\/[]{}—=+*^?#________";
+    this.chars = "ABCDEFGHIJKLMNOPQ";
     this.update = this.update.bind(this);
   }
 
   setText(newText) {
     const oldText = this.el.innerText || "";
+    if (newText.length > 10) this.el.classList.add("small");
+    else this.el.classList.remove("small");
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise((resolve) => (this.resolve = resolve));
 
