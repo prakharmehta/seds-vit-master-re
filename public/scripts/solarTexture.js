@@ -1,7 +1,7 @@
 const TEXTURES = [
   "titan_bright.jpg",
   "mars_bright2.jpg",
-  "pluto_bright.jpg",
+  "pluto.jpg",
   "jupiter_bright.jpg",
   "moon_bright.jpg",
   "europa_bright.jpg",
