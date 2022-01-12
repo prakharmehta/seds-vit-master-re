@@ -44,9 +44,9 @@
   </head>
   <body>
     <div class="main">
-      <%- include ('partials/home.ejs') %> <%- include ('partials/navbar.ejs') %> <%- include ('partials/about.ejs')%>
-      <%- include ('partials/whatwedo.ejs') %> <%- include ('partials/events.ejs') %> <%- include ('partials/blog.ejs')
-      %> <%- include ('partials/contact.ejs') %> <%- include ('partials/footer.ejs')%>
+      <%- include ('partials/home.ejs',{solarTexture}) %> <%- include ('partials/navbar.ejs') %> <%- include
+      ('partials/about.ejs')%> <%- include ('partials/whatwedo.ejs') %> <%- include ('partials/events.ejs') %> <%-
+      include ('partials/blog.ejs') %> <%- include ('partials/contact.ejs') %> <%- include ('partials/footer.ejs')%>
     </div>
     <script>
       $(document).ready(function () {
@@ -56,6 +56,6 @@
         $(".modal").modal();
       });
     </script>
-    <script src="scripts/solarTexture.js"></script>
+    <!-- <script src="scripts/solarTexture.js"></script> -->
   </body>
 </html>

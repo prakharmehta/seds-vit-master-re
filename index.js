@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 var path = require("path");
 const members = require("./boardMembers.json");
+const allSolarTextures = require("./solarTexture.json");
+// Unused solar textures [   "earth_edit.jpg",   "io_bright.jpg",   "earth_night_bright.jpg",  "makemake_bright.jpg",   "neptune_bright.jpg"]
+
 const sanityConfig = require("./sanity_config.json");
 
 const sanityClient = require("@sanity/client");
@@ -14,16 +17,17 @@ app.set("view engine", "ejs");
 const client = sanityClient({
   projectId: "wvxxjfa8",
   dataset: "production",
-  apiVersion: "2022-01-09", // use current UTC date - see "specifying API version"!
-  // token: sanityConfig.token, // or leave blank for unauthenticated usage
-  useCdn: true, // `false` if you want to ensure fresh data
+  apiVersion: "2022-01-12", // use current UTC date - see "specifying API version"!
+  token: sanityConfig.token, // or leave blank for unauthenticated usage
+  useCdn: false, // `false` if you want to ensure fresh data
 });
 
 const imageBuilder = imageUrlBuilder(client);
 
 // Routes
 app.get("/", (_, res) => {
-  res.render("index");
+  const index = new Date().getDay();
+  res.render("index", { solarTexture: allSolarTextures[index] });
 });
 
 app.get("/board", (_, res) => {
@@ -32,16 +36,15 @@ app.get("/board", (_, res) => {
 
 app.get("/:id", async (req, res) => {
   const { id } = req.params;
-  let query = `*[_type == "event" && path.current=="${id}"]`;
+  let query = `*[_type == "event" && path.current=="${id}"][0]`;
 
   if (id === "live") {
     const today = new Date().toISOString();
-    query = `*[_type == "event" && eventEndDate.utc > "${today}"]`;
+    query = `*[_type == "event" && eventEndDate.utc > "${today}"] | order(eventDate.utc asc) [0]`;
   }
 
   const event = await client.fetch(query);
-
-  if (event.length === 0) {
+  if (!event) {
     return res.redirect("/");
   }
 
@@ -55,7 +58,7 @@ app.get("/:id", async (req, res) => {
     eventCountdownVisible = false,
     eventDescription = "",
     tagLine = "",
-  } = event[0];
+  } = event;
 
   const currentDate = new Date();
   const eventDatevalue = new Date(eventDate.utc);
