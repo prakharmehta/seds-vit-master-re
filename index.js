@@ -71,7 +71,7 @@ app.get("/:id", async (req, res) => {
     return res.redirect("/");
   }
 
-  tempDate = new Date(currentDate.getTime() + 22000);
+  // tempDate = new Date(currentDate.getTime() + 22000);
   const posterUrl = imageBuilder.image(poster).url();
   return res.render("event", {
     eventDate: eventDate.utc,

@@ -96,6 +96,13 @@
   .event__details {
     margin-left: 40px;
   }
+  #event__title {
+    font-size: 72px;
+    letter-spacing: 10px;
+  }
+  #event__tagline {
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -107,10 +114,27 @@
     justify-content: center;
     margin: 20px 0px;
   }
+  #event__title {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+  #event__tagline {
+    font-size: 22px;
+  }
   .event__poster {
     width: 80%;
+    max-width: 500px;
   }
   .event__details {
     margin-left: 0px;
+  }
+  .event__description {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  .event__description {
+    font-size: 14px;
   }
 }

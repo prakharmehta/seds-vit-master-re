@@ -86,7 +86,7 @@ function startWorkCountdown() {
     },
     500,
     () => {
-      countdownClock.html(`<span id='word__countdown'>Preparing</span>`);
+      countdownClock.html(`<div id='word__countdown'>Preparing</div>`);
       const el = document.getElementById("word__countdown");
       countdownClock.animate(
         {
@@ -111,8 +111,6 @@ class TextScramble {
 
   setText(newText) {
     const oldText = this.el.innerText || "";
-    if (newText.length > 10) this.el.classList.add("small");
-    else this.el.classList.remove("small");
     const length = Math.max(oldText.length, newText.length);
     const promise = new Promise((resolve) => (this.resolve = resolve));
 
