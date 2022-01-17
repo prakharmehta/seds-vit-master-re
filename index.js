@@ -34,6 +34,21 @@ app.get("/board", (_, res) => {
   res.render("board", { members });
 });
 
+// app.get("/show-me-countdown", (_, res) => {
+//   const currentDate = new Date();
+
+//   const tempDate = new Date(currentDate.getTime() + 26000);
+//   return res.render("event", {
+//     eventDate: tempDate.toUTCString(),
+//     title: "Apollo 11",
+//     eventDescription: ["This is launch operations manager", "The Launch team wishes you ", "good luck and godspeed"],
+//     eventCountdownVisible: true,
+//     tagLine: "",
+//     posterUrl: "https://www.nasa.gov/sites/default/files/thumbnails/image/apollo_11_launch_-_gpn-2000-000630_1.jpg",
+//     eventMeetingLink: "",
+//   });
+// });
+
 app.get("/:id", async (req, res) => {
   const { id } = req.params;
   let query = `*[_type == "event" && path.current=="${id}"][0]`;
@@ -47,7 +62,6 @@ app.get("/:id", async (req, res) => {
   if (!event) {
     return res.redirect("/");
   }
-  // console.log(event);
   const {
     title,
     eventDate,
@@ -81,12 +95,9 @@ app.get("/:id", async (req, res) => {
   } else if (eventDatevalue - currentDate <= 1000 && !eventMeetingLink && currentDate < eventEndDateValue) {
     return res.redirect("/");
   }
-
-  // tempDate = new Date(currentDate.getTime() + 22000);
   const posterUrl = imageBuilder.image(poster).url();
   return res.render("event", {
     eventDate: eventDate.utc,
-    // eventDate: tempDate.toUTCString(),
     title,
     eventDescription,
     eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate && eventMeetingRedirect,
