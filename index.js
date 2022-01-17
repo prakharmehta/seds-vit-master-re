@@ -47,14 +47,16 @@ app.get("/:id", async (req, res) => {
   if (!event) {
     return res.redirect("/");
   }
-
+  // console.log(event);
   const {
     title,
     eventDate,
     eventEndDate,
     poster,
     path,
+    publishEvent = true,
     eventMeetingLink,
+    eventMeetingRedirect = true,
     eventCountdownVisible = false,
     eventDescription = "",
     tagLine = "",
@@ -64,10 +66,19 @@ app.get("/:id", async (req, res) => {
   const eventDatevalue = new Date(eventDate.utc);
   const eventEndDateValue = new Date(eventEndDate.utc);
 
+  if (!publishEvent) {
+    return res.redirect("/");
+  }
+
   // redirect to meeting link if time left is less that 3 sec
-  if (eventDatevalue - currentDate <= 3000 && eventMeetingLink && currentDate < eventEndDateValue) {
+  if (
+    eventMeetingRedirect &&
+    eventDatevalue - currentDate <= 3000 &&
+    eventMeetingLink &&
+    currentDate < eventEndDateValue
+  ) {
     return res.redirect(eventMeetingLink);
-  } else if (eventDatevalue - currentDate <= 1000 && !eventMeetingLink) {
+  } else if (eventDatevalue - currentDate <= 1000 && !eventMeetingLink && currentDate < eventEndDateValue) {
     return res.redirect("/");
   }
 
@@ -78,10 +89,10 @@ app.get("/:id", async (req, res) => {
     // eventDate: tempDate.toUTCString(),
     title,
     eventDescription,
-    eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate,
+    eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate && eventMeetingRedirect,
     tagLine,
     posterUrl,
-    eventMeetingLink,
+    eventMeetingLink: eventMeetingRedirect ? eventMeetingLink : "",
     path,
   });
 });
