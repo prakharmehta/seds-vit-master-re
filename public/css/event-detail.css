@@ -19,6 +19,8 @@
 .event__poster {
   width: 33vw;
   height: auto;
+  max-height: max-content;
+  object-fit: contain;
   box-shadow: 25px 15px #a5a5a5;
   -moz-box-shadow: 25px 15px #a5a5a5;
   -webkit-box-shadow: 25px 15px #a5a5a5;
@@ -45,13 +47,14 @@
 }
 
 #event__title {
-  font-size: 96px;
+  font-size: 64px;
   letter-spacing: 10px;
   text-transform: uppercase;
   text-align: center;
   color: #000;
   line-height: 1;
   margin: 0px;
+  overflow-wrap: anywhere;
 }
 #event__tagline {
   font-size: 32px;
@@ -81,7 +84,7 @@
   }
 
   #event__title {
-    font-size: 80px;
+    font-size: 54px;
     letter-spacing: 10px;
   }
   #event__tagline {
@@ -97,7 +100,7 @@
     margin-left: 40px;
   }
   #event__title {
-    font-size: 72px;
+    font-size: 42px;
     letter-spacing: 10px;
   }
   #event__tagline {
@@ -115,7 +118,7 @@
     margin: 20px 0px;
   }
   #event__title {
-    font-size: 60px;
+    font-size: 40px;
     letter-spacing: 6px;
   }
   #event__tagline {
@@ -136,5 +139,8 @@
 @media screen and (max-width: 558px) {
   .event__description {
     font-size: 14px;
+  }
+  .event__details__container {
+    padding: 20px;
   }
 }
