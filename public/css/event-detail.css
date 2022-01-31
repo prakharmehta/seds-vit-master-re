@@ -5,6 +5,24 @@
   src: local("Graphik Regular"), url("../fonts/GraphikLight.woff2") format("woff");
 }
 
+@font-face {
+  font-family: "Graphik Regular";
+  font-style: bold;
+  font-weight: 700;
+  src: local("Graphik Bold"), url("../fonts/GraphikBold.woff2") format("woff");
+}
+
+.text__bold {
+  font-weight: bold;
+}
+.text__italic {
+  font-style: italic;
+}
+.text__underline {
+  text-decoration: underline;
+  transform: rotate(180deg);
+}
+
 .event__details__container {
   background-color: #fff;
   display: flex;

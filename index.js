@@ -5,6 +5,8 @@ const members = require("./boardMembers.json");
 const allSolarTextures = require("./solarTexture.json");
 // Unused solar textures [   "earth_edit.jpg",   "io_bright.jpg",   "earth_night_bright.jpg",  "makemake_bright.jpg",   "neptune_bright.jpg"]
 
+const formatEventDescription = require("./utils/formatEventDescription");
+
 const sanityConfig = require("./sanity_config.json");
 
 const sanityClient = require("@sanity/client");
@@ -80,6 +82,8 @@ app.get("/:id", async (req, res) => {
   const eventDatevalue = new Date(eventDate.utc);
   const eventEndDateValue = new Date(eventEndDate.utc);
 
+  const formattedDescription = await formatEventDescription(eventDescription);
+
   if (!publishEvent) {
     return res.redirect("/");
   }
@@ -99,7 +103,7 @@ app.get("/:id", async (req, res) => {
   return res.render("event", {
     eventDate: eventDate.utc,
     title,
-    eventDescription,
+    eventDescription: formattedDescription,
     eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate && eventMeetingRedirect,
     tagLine,
     posterUrl,

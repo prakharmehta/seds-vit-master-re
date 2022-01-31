@@ -11,8 +11,8 @@
     <div class="event__poster__mobile__container">
       <img src="<%=posterUrl %>" class="event__poster" alt="Poster for <%=title %>" />
     </div>
-    <% eventDescription.forEach(para => { %>
-    <p class="event__description"><%=para %></p>
+    <% eventDescription.forEach(para=> { %>
+    <p class="event__description"><%-para %></p>
     <% }); %>
   </div>
 </div>
