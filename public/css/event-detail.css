@@ -85,12 +85,17 @@
 }
 .event__description {
   font-size: 20px;
+  width: 100%;
   letter-spacing: 2px;
   text-align: center;
   text-align: justify;
   color: #000;
   margin: 0px;
   margin-top: 40px;
+}
+div.event__description > ul > li {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
 @media (max-width: 1300px) {
