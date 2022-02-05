@@ -8,6 +8,9 @@
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prakharmehta/seds-vit-master-re.git"
