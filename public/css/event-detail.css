@@ -93,6 +93,10 @@
   margin: 0px;
   margin-top: 40px;
 }
+div.event__description > ul {
+  margin: 0px;
+  padding: 0px;
+}
 div.event__description > ul > li {
   list-style-type: disc;
   margin-left: 20px;
