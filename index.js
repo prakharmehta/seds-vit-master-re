@@ -3,6 +3,10 @@ const app = express();
 var path = require("path");
 const members = require("./boardMembers.json");
 const allSolarTextures = require("./solarTexture.json");
+
+const htmlToJson = require("html-to-json");
+const { parse } = require("rss-to-json");
+
 // Unused solar textures [   "earth_edit.jpg",   "io_bright.jpg",   "earth_night_bright.jpg",  "makemake_bright.jpg",   "neptune_bright.jpg"]
 
 const formatEventDescription = require("./utils/formatEventDescription");
@@ -36,6 +40,33 @@ app.get("/board", (_, res) => {
   res.render("board", { members });
 });
 
+app.get("/blogs", async (_, res) => {
+  try {
+    const feed = await parse("https://medium.com/feed/@sedsvit");
+
+    const posts = await Promise.all(
+      feed.items.map(async (item) => {
+        const data = await htmlToJson.parse(item.content_encoded, {
+          title: function ($doc) {
+            return $doc.find("h3").text();
+          },
+          author: function ($doc) {
+            return $doc.find("h4").text();
+          },
+          image: function ($doc) {
+            return $doc.find("img").attr("src");
+          },
+        });
+        return { ...data, title: item.title, link: item.link };
+      })
+    );
+    res.send(posts);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error.message);
+  }
+});
+
 // app.get("/show-me-countdown", (_, res) => {
 //   const currentDate = new Date();
 
@@ -53,6 +84,7 @@ app.get("/board", (_, res) => {
 
 app.get("/:id", async (req, res) => {
   const { id } = req.params;
+  id = id.toLowerCase();
   let query = `*[_type == "event" && path.current=="${id}"][0]`;
 
   if (id === "live") {
