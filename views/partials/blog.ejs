@@ -7,21 +7,10 @@
   <div class="blogs-content container">
     <div id="medium-widget"></div>
     <div class="explore-more">
-      <center><a target="_blank" href="https://sedsvit.medium.com/"><button>Read More</button></a></center>
+      <center>
+        <a target="_blank" href="https://sedsvit.medium.com/"><button>Read More</button></a>
+      </center>
     </div>
   </div>
-  <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-  <script>
-    MediumWidget.Init({
-      renderTo: "#medium-widget",
-      params: {
-        resource: "https://medium.com/@sedsvit",
-        postsPerLine: 3,
-        limit: 3,
-        picture: "big",
-        fields: ["description", "publishAt"],
-        ratio: "square",
-      },
-    });
-  </script>
+  <script src="/js/getBlogs.js" defer></script>
 </div>

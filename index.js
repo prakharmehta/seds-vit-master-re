@@ -7,6 +7,8 @@ const allSolarTextures = require("./solarTexture.json");
 const htmlToJson = require("html-to-json");
 const { parse } = require("rss-to-json");
 
+const { format } = require("date-fns");
+
 // Unused solar textures [   "earth_edit.jpg",   "io_bright.jpg",   "earth_night_bright.jpg",  "makemake_bright.jpg",   "neptune_bright.jpg"]
 
 const formatEventDescription = require("./utils/formatEventDescription");
@@ -40,12 +42,16 @@ app.get("/board", (_, res) => {
   res.render("board", { members });
 });
 
-app.get("/blogs", async (_, res) => {
+app.get("/blogs", async (req, res) => {
+  const { limit = 0 } = req.query;
+
   try {
-    const feed = await parse("https://medium.com/feed/@sedsvit");
+    var feed = await parse("https://medium.com/feed/@sedsvit");
+    var items = feed.items;
+    if (limit) items = items.slice(0, limit);
 
     const posts = await Promise.all(
-      feed.items.map(async (item) => {
+      items.map(async (item) => {
         const data = await htmlToJson.parse(item.content_encoded, {
           title: function ($doc) {
             return $doc.find("h3").text();
@@ -57,7 +63,12 @@ app.get("/blogs", async (_, res) => {
             return $doc.find("img").attr("src");
           },
         });
-        return { ...data, title: item.title, link: item.link };
+        return {
+          ...data,
+          title: item.title,
+          link: item.link,
+          published: format(new Date(item.published), "do MMM, yyyy"),
+        };
       })
     );
     res.send(posts);
@@ -83,7 +94,7 @@ app.get("/blogs", async (_, res) => {
 // });
 
 app.get("/:id", async (req, res) => {
-  const { id } = req.params;
+  let { id } = req.params;
   id = id.toLowerCase();
   let query = `*[_type == "event" && path.current=="${id}"][0]`;
 

@@ -2,16 +2,14 @@
   font-family: "AcherusGrotesque-ExtraBold";
   font-style: normal;
   font-weight: normal;
-  src: local("AcherusGrotesque-ExtraBold"),
-    url("../fonts/AcherusGrotesque-ExtraBold.woff") format("woff");
+  src: local("AcherusGrotesque-ExtraBold"), url("../fonts/AcherusGrotesque-ExtraBold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Acherus Grotesque Medium";
   font-style: normal;
   font-weight: normal;
-  src: local("Acherus Grotesque Medium"),
-    url("../fonts/AcherusGrotesqueMedium.woff2") format("woff");
+  src: local("Acherus Grotesque Medium"), url("../fonts/AcherusGrotesqueMedium.woff2") format("woff");
 }
 
 #blog {
@@ -19,7 +17,6 @@
   background: white;
   box-sizing: border-box;
   padding-bottom: 64px;
-
 }
 
 .blogs-heading {
@@ -37,55 +34,78 @@
   padding-top: 64px;
 }
 
+#medium-widget {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  #medium-widget {
+    flex-direction: column;
+  }
+}
 .medium-widget-article__content {
   background-color: white !important;
-  padding: 16px;
+  padding: 15px;
   box-sizing: border-box;
   font-family: "Acherus Grotesque Regular";
+  width: 33.33%;
+  margin: 0px 10px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
+  min-height: 150px !important;
+}
+
+@media (max-width: 768px) {
+  .medium-widget-article__content {
+    width: 100%;
+    margin: 10px 0px;
+  }
 }
 
 .medium-widget-article__content * {
   color: #120c6e !important;
 }
+.medium-widget-article__values {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .medium-widget-article__title {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 300;
   font-size: 20px !important;
   font-family: "AcherusGrotesque-ExtraBold";
-}
-
-.medium-widget-article__title,
-.medium-widget-article__description {
   color: #120c6e !important;
   text-align: center;
-  /* color: #f8d3b5 !important; */
 }
 
-.medium-widget-article__description {
+/* .medium-widget-article__description {
   margin-top: 14px !important;
   font-size: 18px !important;
   font-family: "Acherus Grotesque Regular";
-  font-weight: 300!important;
-}
-
-.medium-widget-article__info {
-  display: flex;
-  font-size: 10px !important;
-  justify-content: center;
-}
+  font-weight: 300 !important;
+} */
 
 .medium-widget-article__image {
   background: white;
 }
-
-.medium-widget-article__image img {
-  margin-bottom: 0 !important;
+.medium-widget-article__author {
+  font-size: 14px !important;
+  font-family: "Acherus Grotesque Medium";
+  font-weight: bold;
+  color: #120c6e !important;
+  text-align: center;
 }
 
 .medium-widget-article__date {
-  color: black!important;
-  font-weight: lighter!important;
+  font-size: 10px !important;
+  text-align: center;
+  color: black !important;
+  font-weight: lighter !important;
 }
 
 .explore-more {
@@ -117,39 +137,13 @@
   color: #3940d0;
   cursor: pointer;
 }
-.medium-widget-article__content, 
+
 .medium-widget-article__image img {
-  padding: 30px!important;
   border-radius: 5px;
-  /* min-height: 225px!important; */
-}
-
-.medium-widget-article__content {
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  padding-top: 0!important;
-  padding-bottom: 15px!important;
-  text-align: center;
-}
-
-#blog a {
-  box-sizing: border-box;
-  border-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-
-.medium-widget-article__column {
-  box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.16);
-  border-radius: 5px!important;
-  /* height: 425px !important; */
-
-}
-
-@media only screen and (orientation: portrait) {
-  .medium-widget-article__row {
-    flex-direction: column !important;
-  }
+  margin-bottom: 0 !important;
+  width: 100%;
+  /* height: auto; */
+  aspect-ratio: 1;
+  padding-bottom: 0%;
+  object-fit: cover;
 }
