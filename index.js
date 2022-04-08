@@ -11,7 +11,7 @@ const { format } = require("date-fns");
 
 // Unused solar textures [   "earth_edit.jpg",   "io_bright.jpg",   "earth_night_bright.jpg",  "makemake_bright.jpg",   "neptune_bright.jpg"]
 
-const formatEventDescription = require("./utils/formatEventDescription");
+const { formatEventDescription, formatEventDescriptionForMeta } = require("./utils/formatEventDescription");
 
 const sanityConfig = require("./sanity_config.json");
 
@@ -127,7 +127,7 @@ app.get("/:id", async (req, res) => {
   const eventEndDateValue = new Date(eventEndDate.utc);
 
   const formattedDescription = await formatEventDescription(eventDescription);
-
+  const metaDescription = await formatEventDescriptionForMeta(eventDescription);
   if (!publishEvent) {
     return res.redirect("/");
   }
@@ -148,6 +148,7 @@ app.get("/:id", async (req, res) => {
     eventDate: eventDate.utc,
     title,
     eventDescription: formattedDescription,
+    metaDescription,
     eventCountdownVisible: eventCountdownVisible && eventEndDateValue >= currentDate && eventMeetingRedirect,
     tagLine,
     posterUrl,
