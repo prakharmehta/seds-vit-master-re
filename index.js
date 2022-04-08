@@ -35,6 +35,7 @@ const imageBuilder = imageUrlBuilder(client);
 // Routes
 app.get("/", (_, res) => {
   const index = new Date().getDay();
+
   res.render("index", { solarTexture: allSolarTextures[index] });
 });
 
