@@ -97,7 +97,7 @@ app.get("/blogs", async (req, res) => {
 app.get("/:id", async (req, res) => {
   let { id } = req.params;
   id = id.toLowerCase();
-  let query = `*[_type == "event" && path.current=="${id}"][0]`;
+  let query = `*[_type in ["event", "blog"] && path.current=="${id}"][0]`;
 
   if (id === "live") {
     const today = new Date().toISOString();
@@ -108,6 +108,12 @@ app.get("/:id", async (req, res) => {
   if (!event) {
     return res.redirect("/");
   }
+
+  if (event._type === "blog") {
+    res.redirect(event.blogLink);
+    return;
+  }
+
   const {
     title,
     eventDate,
