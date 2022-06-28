@@ -50,9 +50,7 @@ app.get("/blogs", async (req, res) => {
     var feed = await parse("https://medium.com/feed/@sedsvit");
     var items = feed.items;
 
-    // console.log(typeof limit  );
-
-    if (limit) items = items.slice(1, parseInt(limit) + 1);
+    if (limit) items = items.slice(0, parseInt(limit));
 
     const posts = await Promise.all(
       items.map(async (item) => {
@@ -60,15 +58,16 @@ app.get("/blogs", async (req, res) => {
           title: function ($doc) {
             return $doc.find("h3").text();
           },
-          author: function ($doc) {
-            return $doc.find("h4").text();
-          },
           image: function ($doc) {
             return $doc.find("img").attr("src");
           },
         });
+        const author = await htmlToJson.parse(item.content_encoded, function () {
+          return this.map("h4", (item) => item.text());
+        });
         return {
           ...data,
+          author: author[0],
           title: item.title,
           link: item.link,
           published: format(new Date(item.published), "do MMM, yyyy"),
