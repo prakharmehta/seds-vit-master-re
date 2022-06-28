@@ -49,7 +49,10 @@ app.get("/blogs", async (req, res) => {
   try {
     var feed = await parse("https://medium.com/feed/@sedsvit");
     var items = feed.items;
-    if (limit) items = items.slice(0, limit);
+
+    // console.log(typeof limit  );
+
+    if (limit) items = items.slice(1, parseInt(limit) + 1);
 
     const posts = await Promise.all(
       items.map(async (item) => {
