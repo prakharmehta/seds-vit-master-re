@@ -95,6 +95,9 @@ app.get("/blogs", async (req, res) => {
 //     eventMeetingLink: "",
 //   });
 // });
+app.get("/retrograde", (req, res) => {
+  res.redirect("https://meet.google.com/gge-dqka-hnm");
+});
 
 app.get("/:id", async (req, res) => {
   let { id } = req.params;
