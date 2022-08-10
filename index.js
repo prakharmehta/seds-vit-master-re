@@ -95,7 +95,6 @@ app.get("/blogs", async (req, res) => {
 //     eventMeetingLink: "",
 //   });
 // });
-
 app.get("/:id", async (req, res) => {
   let { id } = req.params;
   id = id.toLowerCase();
