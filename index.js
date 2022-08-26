@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 const client = sanityClient({
   projectId: "wvxxjfa8",
   dataset: "production",
-  apiVersion: "2022-01-12", // use current UTC date - see "specifying API version"!
+  apiVersion: "2022-08-10", // use current UTC date - see "specifying API version"!
   token: sanityConfig.token, // or leave blank for unauthenticated usage
   useCdn: false, // `false` if you want to ensure fresh data
 });
